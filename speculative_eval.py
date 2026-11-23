@@ -232,12 +232,53 @@ def isolated_cost(model, target):
     return reports
 
 
+def course_alignment(model, target, rows, course, destination, deadline):
+    bank_file = course / "data/prefix_banks/prefix_banks_locked.jsonl.gz"
+    grouped = {}
+    for entry in read_jsonl(bank_file):
+        key = entry["prompt_id"], entry["bank"]
+        grouped.setdefault(key, []).append(entry)
+    assert set(grouped) == {(row["id"], bank) for row in rows
+                            for bank in ("teacher", "original_draft")}
+    destination.mkdir(parents=True, exist_ok=True)
+    for row in rows:
+        if perf_counter() >= deadline:
+            return False
+        path = destination / f"{row['id']}.json"
+        if path.exists():
+            continue
+        results = {}
+        for bank in ("teacher", "original_draft"):
+            records = sorted(grouped[row["id"], bank], key=lambda item: item["position"])
+            longest = records[-1]["response_prefix_token_ids"]
+            for record in records:
+                assert record["prompt"] == row["text"]
+                assert record["response_prefix_token_ids"] == longest[:record["position"] - 1]
+            positions = [record["position"] for record in records]
+            metrics = []
+            for offset in range(0, len(positions), 24):
+                subset = positions[offset:offset + 24]
+                a = alignment_logits(target, row, {"response_ids": longest}, subset)
+                b = alignment_logits(model, row, {"response_ids": longest}, subset)
+                p, q = a.exp(), b.exp()
+                tv = .5 * (p - q).abs().sum(-1)
+                values = torch.stack(((p * (a - b)).sum(-1), (q * (b - a)).sum(-1), tv,
+                                      1 - tv, (a.argmax(-1) == b.argmax(-1)).float()), dim=-1)
+                metrics.extend(dict(position=i, forward_kl=x[0], reverse_kl=x[1], tv=x[2],
+                                    expected_acceptance=x[3], greedy_agreement=bool(x[4]))
+                               for i, x in zip(subset, values.tolist(), strict=True))
+            results[bank] = metrics
+        write_json(path, dict(id=row["id"], domain=row["domain"], prefix_metrics=results))
+    return True
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--course-data", type=Path, required=True)
     parser.add_argument("--adapters", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--hours", type=float, default=8)
+    parser.add_argument("--course-alignment-only", action="store_true")
     args = parser.parse_args()
     if not torch.cuda.is_available():
         parser.error("CUDA required")
@@ -266,6 +307,17 @@ def main():
         raise ValueError("Existing evaluation has different provenance")
     write_json(provenance, manifest)
     probe = tensor(rows[0]["tokens"])
+    if args.course_alignment_only:
+        for name in DRAFTS:
+            print("Scoring course prefix banks:", name, flush=True)
+            model = draft_model(name, lock["model_draft"], adapters, tokenizer, probe, info)
+            completed = course_alignment(model, target, rows, args.course_data,
+                                         out / "course_alignment" / name, deadline)
+            del model
+            torch.cuda.empty_cache()
+            if not completed:
+                return
+        return
     if not make_bank(banks / "teacher", "teacher", rows, target, target, eos, deadline):
         return
     for name in DRAFTS:

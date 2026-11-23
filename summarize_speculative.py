@@ -137,6 +137,7 @@ def main():
     parser.add_argument("archive", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--training-archive", type=Path)
+    parser.add_argument("--course-bank-archive", type=Path)
     args = parser.parse_args()
     drafts = defaultdict(list)
     checks = {}
@@ -152,6 +153,18 @@ def main():
                 drafts[name.split("/")[-2]].append(json.loads(archive.read(name)))
             if "/model_checks/" in name and name.endswith(".json"):
                 checks[name.rsplit("/", 1)[-1]] = json.loads(archive.read(name))
+    if args.course_bank_archive:
+        course = {}
+        with ZipFile(args.course_bank_archive) as archive:
+            for name in archive.namelist():
+                if "/course_alignment/" in name and name.endswith(".json"):
+                    row = json.loads(archive.read(name))
+                    course[name.split("/")[-2], row["id"]] = row["prefix_metrics"]
+        if len(course) != 600:
+            raise ValueError("Expected course scores for all 600 draft/prompt pairs")
+        for draft, rows in drafts.items():
+            for row in rows:
+                row["prefix_metrics"].update(course[draft, row["id"]])
     if len(drafts) != 5:
         raise ValueError("Expected five draft configurations")
     summary = {}

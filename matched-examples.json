@@ -166,7 +166,7 @@
           1304,
           1305
         ],
-        "context_prefill_ms": 1375.4846939999652,
+        "context_prefill_ms": 1463.8176290000047,
         "context_prefill_peak_allocated_bytes": 4089557504,
         "int4_budget_bytes": 21676032,
         "reference_check": {
@@ -186,10 +186,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 75751424,
             "fp16_context_byte_fraction": 1.0,
-            "preprocessing_ms": 0.060232999999243475,
+            "preprocessing_ms": 0.056505999964429066,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 40.15655699998888,
-            "decode_ms": 179.42825699998366,
+            "suffix_prefill_ms": 43.27011999998831,
+            "decode_ms": 195.78842299995358,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3593482240
@@ -962,10 +962,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21650380,
             "fp16_context_byte_fraction": 0.28580822454241916,
-            "preprocessing_ms": 1.0858190000249124,
+            "preprocessing_ms": 1.2709709999967345,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 32.9260569999974,
-            "decode_ms": 166.9039009999551,
+            "suffix_prefill_ms": 39.453858000001674,
+            "decode_ms": 192.33892500000138,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3412003328
@@ -1738,10 +1738,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21650380,
             "fp16_context_byte_fraction": 0.28580822454241916,
-            "preprocessing_ms": 1.2625210000010156,
-            "question_scoring_ms": 67.54022900003065,
-            "suffix_prefill_ms": 34.077256999978545,
-            "decode_ms": 167.3950929999819,
+            "preprocessing_ms": 1.3942690000021685,
+            "question_scoring_ms": 69.11393400002908,
+            "suffix_prefill_ms": 38.4519320000436,
+            "decode_ms": 192.57996199996796,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3412003328
@@ -1761,13 +1761,13 @@
             ],
             "packed_context_bytes": 21676032,
             "fp16_context_byte_fraction": 0.2861468584405753,
-            "preprocessing_ms": 22.05826099998376,
+            "preprocessing_ms": 25.90489400000706,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 33.89890500000092,
-            "decode_ms": 576.4873030000217,
+            "suffix_prefill_ms": 38.35120599995889,
+            "decode_ms": 652.2955050000405,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1433600,
-            "peak_allocated_bytes": 3672737792
+            "peak_allocated_bytes": 3749627904
           },
           "int4_channel": {
             "generated": "32056",
@@ -1784,13 +1784,13 @@
             ],
             "packed_context_bytes": 21676032,
             "fp16_context_byte_fraction": 0.2861468584405753,
-            "preprocessing_ms": 23.08462299998837,
+            "preprocessing_ms": 27.03605799996467,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 35.48197700001765,
-            "decode_ms": 179.12505000003875,
+            "suffix_prefill_ms": 39.547455999979775,
+            "decode_ms": 195.61015100003942,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3672087040
+            "peak_allocated_bytes": 3672087552
           },
           "hybrid": {
             "generated": "32056",
@@ -2210,13 +2210,13 @@
             ],
             "packed_context_bytes": 21606368,
             "fp16_context_byte_fraction": 0.28522721896290687,
-            "preprocessing_ms": 40.9003369999823,
-            "question_scoring_ms": 67.54022900003065,
-            "suffix_prefill_ms": 33.57890500001304,
-            "decode_ms": 180.6625179999628,
+            "preprocessing_ms": 48.108055999989574,
+            "question_scoring_ms": 69.11393400002908,
+            "suffix_prefill_ms": 38.81398800001534,
+            "decode_ms": 196.49341699999923,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3672233984
+            "peak_allocated_bytes": 3672234496
           }
         }
       },
@@ -2259,7 +2259,7 @@
           1307,
           1308
         ],
-        "context_prefill_ms": 1341.5872239999658,
+        "context_prefill_ms": 1434.8177300000202,
         "context_prefill_peak_allocated_bytes": 4085487616,
         "int4_budget_bytes": 21417984,
         "reference_check": null,
@@ -2276,10 +2276,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 75493376,
             "fp16_context_byte_fraction": 1.0,
-            "preprocessing_ms": 0.040172000012717035,
+            "preprocessing_ms": 0.048710000044138724,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 38.61556499998642,
-            "decode_ms": 179.83366200002138,
+            "suffix_prefill_ms": 39.925950999986526,
+            "decode_ms": 192.52945800002408,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3593207808
@@ -3043,10 +3043,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21392296,
             "fp16_context_byte_fraction": 0.2833665300648364,
-            "preprocessing_ms": 1.1375159999715834,
+            "preprocessing_ms": 1.2171380000154386,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 34.926035000012234,
-            "decode_ms": 169.20247200005178,
+            "suffix_prefill_ms": 38.765936999993755,
+            "decode_ms": 192.217415000016,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3409671680
@@ -3810,10 +3810,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21392296,
             "fp16_context_byte_fraction": 0.2833665300648364,
-            "preprocessing_ms": 1.1813260000508308,
-            "question_scoring_ms": 65.46733999999788,
-            "suffix_prefill_ms": 33.89822299999423,
-            "decode_ms": 171.67894699997532,
+            "preprocessing_ms": 1.3863899999932983,
+            "question_scoring_ms": 68.66712999999436,
+            "suffix_prefill_ms": 38.82191899998588,
+            "decode_ms": 191.5581299999758,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3409671680
@@ -3833,13 +3833,13 @@
             ],
             "packed_context_bytes": 21417984,
             "fp16_context_byte_fraction": 0.2837067983289024,
-            "preprocessing_ms": 21.820964000028198,
+            "preprocessing_ms": 25.469746000055693,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 33.60961900000348,
-            "decode_ms": 574.5045890000142,
+            "suffix_prefill_ms": 38.978939000003265,
+            "decode_ms": 655.6309050000095,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1433600,
-            "peak_allocated_bytes": 3672191488
+            "peak_allocated_bytes": 3672192000
           },
           "int4_channel": {
             "generated": "58711",
@@ -3856,13 +3856,13 @@
             ],
             "packed_context_bytes": 21417984,
             "fp16_context_byte_fraction": 0.2837067983289024,
-            "preprocessing_ms": 22.770287000014378,
+            "preprocessing_ms": 28.475926999988133,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 35.72063100000378,
-            "decode_ms": 180.22382000003745,
+            "suffix_prefill_ms": 38.802513000007366,
+            "decode_ms": 193.8248319999616,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3671540736
+            "peak_allocated_bytes": 3671541248
           },
           "hybrid": {
             "generated": "58711",
@@ -4273,13 +4273,13 @@
             ],
             "packed_context_bytes": 21347312,
             "fp16_context_byte_fraction": 0.2827706632168629,
-            "preprocessing_ms": 40.639489999989564,
-            "question_scoring_ms": 65.46733999999788,
-            "suffix_prefill_ms": 33.48631600005092,
-            "decode_ms": 178.11364700003196,
+            "preprocessing_ms": 46.80548100003534,
+            "question_scoring_ms": 68.66712999999436,
+            "suffix_prefill_ms": 38.39097100001254,
+            "decode_ms": 195.31733700000586,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3671929856
+            "peak_allocated_bytes": 3671930368
           }
         }
       }
@@ -4323,7 +4323,7 @@
           2393,
           2394
         ],
-        "context_prefill_ms": 1328.949023000007,
+        "context_prefill_ms": 1369.8404220000384,
         "context_prefill_peak_allocated_bytes": 4087410688,
         "int4_budget_bytes": 21561344,
         "reference_check": {
@@ -4343,10 +4343,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 75636736,
             "fp16_context_byte_fraction": 1.0,
-            "preprocessing_ms": 0.04703999996991115,
+            "preprocessing_ms": 0.06858299997247741,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 39.67543799996065,
-            "decode_ms": 179.52587299998868,
+            "suffix_prefill_ms": 40.70175399999698,
+            "decode_ms": 198.40078999999378,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
             "peak_allocated_bytes": 3593346560
@@ -5115,10 +5115,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21535676,
             "fp16_context_byte_fraction": 0.2847250838534333,
-            "preprocessing_ms": 1.073467999958666,
+            "preprocessing_ms": 1.4742239999918638,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 32.774768000024324,
-            "decode_ms": 166.28243099995643,
+            "suffix_prefill_ms": 39.30230800000345,
+            "decode_ms": 197.06725800000413,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
             "peak_allocated_bytes": 3410285056
@@ -5887,10 +5887,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21535676,
             "fp16_context_byte_fraction": 0.2847250838534333,
-            "preprocessing_ms": 1.2235429999805092,
-            "question_scoring_ms": 68.41423200000918,
-            "suffix_prefill_ms": 32.641214000022956,
-            "decode_ms": 166.2990670000113,
+            "preprocessing_ms": 1.447135999967486,
+            "question_scoring_ms": 69.2892870000037,
+            "suffix_prefill_ms": 38.150674999997136,
+            "decode_ms": 192.7569840000274,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
             "peak_allocated_bytes": 3410285056
@@ -5910,13 +5910,13 @@
             ],
             "packed_context_bytes": 21561344,
             "fp16_context_byte_fraction": 0.2850644427596664,
-            "preprocessing_ms": 22.298689000024297,
+            "preprocessing_ms": 26.15480800000114,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 33.36312400000452,
-            "decode_ms": 576.6543610000099,
+            "suffix_prefill_ms": 38.963303000002725,
+            "decode_ms": 638.5878979999688,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1404928,
-            "peak_allocated_bytes": 3672446976
+            "peak_allocated_bytes": 3672447488
           },
           "int4_channel": {
             "generated": "38757",
@@ -5933,13 +5933,13 @@
             ],
             "packed_context_bytes": 21561344,
             "fp16_context_byte_fraction": 0.2850644427596664,
-            "preprocessing_ms": 22.326570000018364,
+            "preprocessing_ms": 27.761623999992935,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 35.62893800000211,
-            "decode_ms": 179.60824300001832,
+            "suffix_prefill_ms": 39.088789000004454,
+            "decode_ms": 234.99172800001134,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
-            "peak_allocated_bytes": 3671796224
+            "peak_allocated_bytes": 3671796736
           },
           "hybrid": {
             "generated": "38757",
@@ -6355,13 +6355,13 @@
             ],
             "packed_context_bytes": 21491232,
             "fp16_context_byte_fraction": 0.2841374857846854,
-            "preprocessing_ms": 40.178281000009974,
-            "question_scoring_ms": 68.41423200000918,
-            "suffix_prefill_ms": 33.86565300002076,
-            "decode_ms": 191.53958300000795,
+            "preprocessing_ms": 48.53966199999604,
+            "question_scoring_ms": 69.2892870000037,
+            "suffix_prefill_ms": 40.367304000028525,
+            "decode_ms": 201.42493199995215,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
-            "peak_allocated_bytes": 3672187392
+            "peak_allocated_bytes": 3672187904
           }
         }
       },
@@ -6403,7 +6403,7 @@
           2391,
           2392
         ],
-        "context_prefill_ms": 1366.7292270000075,
+        "context_prefill_ms": 1363.6821960000134,
         "context_prefill_peak_allocated_bytes": 4086116864,
         "int4_budget_bytes": 21446656,
         "reference_check": null,
@@ -6420,10 +6420,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 75522048,
             "fp16_context_byte_fraction": 1.0,
-            "preprocessing_ms": 0.038748999998006184,
+            "preprocessing_ms": 0.05624900001066635,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 39.07351999998809,
-            "decode_ms": 179.6899110000254,
+            "suffix_prefill_ms": 39.8144629999706,
+            "decode_ms": 194.8193290000404,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
             "peak_allocated_bytes": 3593220608
@@ -7188,10 +7188,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21420972,
             "fp16_context_byte_fraction": 0.2836386534432965,
-            "preprocessing_ms": 1.060186000017893,
+            "preprocessing_ms": 1.3057759999810514,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 33.060076000026584,
-            "decode_ms": 166.21350799999846,
+            "suffix_prefill_ms": 39.09609300001193,
+            "decode_ms": 199.98623800000814,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
             "peak_allocated_bytes": 3409700352
@@ -7956,10 +7956,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 21420972,
             "fp16_context_byte_fraction": 0.2836386534432965,
-            "preprocessing_ms": 1.1614729999678275,
-            "question_scoring_ms": 68.38670100000854,
-            "suffix_prefill_ms": 33.23149599998487,
-            "decode_ms": 165.6572559999745,
+            "preprocessing_ms": 1.4710169999716527,
+            "question_scoring_ms": 68.49237099999073,
+            "suffix_prefill_ms": 39.34830199995076,
+            "decode_ms": 198.65296400001853,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
             "peak_allocated_bytes": 3409700352
@@ -7979,13 +7979,13 @@
             ],
             "packed_context_bytes": 21446656,
             "fp16_context_byte_fraction": 0.2839787395596052,
-            "preprocessing_ms": 22.661526000035792,
+            "preprocessing_ms": 25.99584199998617,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 34.48122399998965,
-            "decode_ms": 574.9821480000037,
+            "suffix_prefill_ms": 39.33651500000224,
+            "decode_ms": 640.154855999981,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1404928,
-            "peak_allocated_bytes": 3672200192
+            "peak_allocated_bytes": 3672200704
           },
           "int4_channel": {
             "generated": "54501",
@@ -8002,13 +8002,13 @@
             ],
             "packed_context_bytes": 21446656,
             "fp16_context_byte_fraction": 0.2839787395596052,
-            "preprocessing_ms": 22.28050200000098,
+            "preprocessing_ms": 28.001182000025437,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 36.20370799995953,
-            "decode_ms": 179.22753800002056,
+            "suffix_prefill_ms": 39.861489999964306,
+            "decode_ms": 202.03829299998688,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
-            "peak_allocated_bytes": 3671549440
+            "peak_allocated_bytes": 3671549952
           },
           "hybrid": {
             "generated": "54501",
@@ -8420,13 +8420,13 @@
             ],
             "packed_context_bytes": 21376096,
             "fp16_context_byte_fraction": 0.2830444428625664,
-            "preprocessing_ms": 41.540113999985806,
-            "question_scoring_ms": 68.38670100000854,
-            "suffix_prefill_ms": 33.64171900000201,
-            "decode_ms": 179.69819999996162,
+            "preprocessing_ms": 48.640777999992224,
+            "question_scoring_ms": 68.49237099999073,
+            "suffix_prefill_ms": 39.91612599998007,
+            "decode_ms": 200.67947300003652,
             "shared_fp16_suffix_bytes_at_start": 946176,
             "shared_fp16_suffix_bytes_upper_bound": 1089536,
-            "peak_allocated_bytes": 3671924224
+            "peak_allocated_bytes": 3671924736
           }
         }
       }
@@ -8471,7 +8471,7 @@
           1296,
           1297
         ],
-        "context_prefill_ms": 1366.7220000000384,
+        "context_prefill_ms": 1385.1377920000232,
         "context_prefill_peak_allocated_bytes": 4071450624,
         "int4_budget_bytes": 22163456,
         "reference_check": null,
@@ -8488,10 +8488,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 74919936,
             "fp16_context_byte_fraction": 1.0,
-            "preprocessing_ms": 0.04317299999456736,
+            "preprocessing_ms": 0.05162399997971079,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 39.567589999990105,
-            "decode_ms": 180.0033939999821,
+            "suffix_prefill_ms": 39.60074399998348,
+            "decode_ms": 195.31268299999738,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3592684544
@@ -9281,10 +9281,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 22137872,
             "fp16_context_byte_fraction": 0.295487065018315,
-            "preprocessing_ms": 1.1700900000164438,
+            "preprocessing_ms": 1.3625220000221816,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 34.10398699998041,
-            "decode_ms": 172.80095199998868,
+            "suffix_prefill_ms": 38.91836399998283,
+            "decode_ms": 194.25058000001627,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3414114816
@@ -10074,10 +10074,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 22137872,
             "fp16_context_byte_fraction": 0.295487065018315,
-            "preprocessing_ms": 1.2067210000168416,
-            "question_scoring_ms": 68.22450300001037,
-            "suffix_prefill_ms": 33.97259899998062,
-            "decode_ms": 170.01701600003116,
+            "preprocessing_ms": 1.3608579999981885,
+            "question_scoring_ms": 69.42924000003359,
+            "suffix_prefill_ms": 38.3905819999768,
+            "decode_ms": 204.09389500002817,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3414114816
@@ -10097,13 +10097,13 @@
             ],
             "packed_context_bytes": 22163456,
             "fp16_context_byte_fraction": 0.29582854955989285,
-            "preprocessing_ms": 21.931332000008297,
+            "preprocessing_ms": 26.101186000005328,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 33.80467000005183,
-            "decode_ms": 574.546813999973,
+            "suffix_prefill_ms": 39.26102599996284,
+            "decode_ms": 685.5384489999778,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1433600,
-            "peak_allocated_bytes": 3668715520
+            "peak_allocated_bytes": 3668716032
           },
           "int4_channel": {
             "generated": "84561",
@@ -10120,13 +10120,13 @@
             ],
             "packed_context_bytes": 22163456,
             "fp16_context_byte_fraction": 0.29582854955989285,
-            "preprocessing_ms": 24.30627100000038,
+            "preprocessing_ms": 26.343870000005154,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 35.51207999998951,
-            "decode_ms": 179.1171049999889,
+            "suffix_prefill_ms": 39.42609199998515,
+            "decode_ms": 228.43059199999516,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3667858944
+            "peak_allocated_bytes": 3667859456
           },
           "hybrid": {
             "generated": "16458",
@@ -10517,13 +10517,13 @@
             ],
             "packed_context_bytes": 20771632,
             "fp16_context_byte_fraction": 0.2772510643895905,
-            "preprocessing_ms": 41.28518800001757,
-            "question_scoring_ms": 68.22450300001037,
-            "suffix_prefill_ms": 33.388342000023385,
-            "decode_ms": 178.30001400000128,
+            "preprocessing_ms": 48.21354300003122,
+            "question_scoring_ms": 69.42924000003359,
+            "suffix_prefill_ms": 39.294355999970776,
+            "decode_ms": 199.1666409999766,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3668150272
+            "peak_allocated_bytes": 3668150784
           }
         }
       },
@@ -10566,7 +10566,7 @@
           1292,
           1293
         ],
-        "context_prefill_ms": 1333.37762900004,
+        "context_prefill_ms": 1376.6594260000034,
         "context_prefill_peak_allocated_bytes": 4072047616,
         "int4_budget_bytes": 22192128,
         "reference_check": null,
@@ -10583,10 +10583,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 74948608,
             "fp16_context_byte_fraction": 1.0,
-            "preprocessing_ms": 0.03825099997811776,
+            "preprocessing_ms": 0.05310500000632601,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 38.385044999984075,
-            "decode_ms": 178.8339370000358,
+            "suffix_prefill_ms": 39.353354000013496,
+            "decode_ms": 194.23292299995865,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3592710656
@@ -11377,10 +11377,10 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 22166548,
             "fp16_context_byte_fraction": 0.29575663366556454,
-            "preprocessing_ms": 1.101056999971206,
+            "preprocessing_ms": 1.2986819999696309,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 33.92155099999172,
-            "decode_ms": 168.27465599999414,
+            "suffix_prefill_ms": 39.50541799997609,
+            "decode_ms": 198.70452399999294,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3414245376
@@ -12171,16 +12171,16 @@
             "relative_kv_l2": null,
             "packed_context_bytes": 22166548,
             "fp16_context_byte_fraction": 0.29575663366556454,
-            "preprocessing_ms": 1.199302000031821,
-            "question_scoring_ms": 65.02405200001249,
-            "suffix_prefill_ms": 33.32449300000917,
-            "decode_ms": 172.04291399997373,
+            "preprocessing_ms": 1.8220500000438733,
+            "question_scoring_ms": 68.94259399996372,
+            "suffix_prefill_ms": 39.859949999993205,
+            "decode_ms": 195.1225600000157,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
             "peak_allocated_bytes": 3414245376
           },
           "int4_token": {
-            "generated": " river  river 880    888  ",
+            "generated": " river  river  river 8  airport   airport  6 river",
             "generated_tokens": 16,
             "exact_match": false,
             "answer_nll_sum": 22.39866065979004,
@@ -12194,13 +12194,13 @@
             ],
             "packed_context_bytes": 22192128,
             "fp16_context_byte_fraction": 0.29609793420045905,
-            "preprocessing_ms": 21.91675099999202,
+            "preprocessing_ms": 28.682763999995586,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 33.38078399997357,
-            "decode_ms": 582.1445070000095,
+            "suffix_prefill_ms": 38.613598999972965,
+            "decode_ms": 665.5775269999822,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1433600,
-            "peak_allocated_bytes": 3668885504
+            "peak_allocated_bytes": 3668886016
           },
           "int4_channel": {
             "generated": "54769",
@@ -12217,13 +12217,13 @@
             ],
             "packed_context_bytes": 22192128,
             "fp16_context_byte_fraction": 0.29609793420045905,
-            "preprocessing_ms": 23.19587300002013,
+            "preprocessing_ms": 28.250066999987666,
             "question_scoring_ms": 0,
-            "suffix_prefill_ms": 35.353645999975924,
-            "decode_ms": 181.55830599999945,
+            "suffix_prefill_ms": 39.72399700001006,
+            "decode_ms": 232.1235840000213,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3668028928
+            "peak_allocated_bytes": 3668029440
           },
           "hybrid": {
             "generated": "54764",
@@ -12615,13 +12615,13 @@
             ],
             "packed_context_bytes": 20800416,
             "fp16_context_byte_fraction": 0.27752905030604436,
-            "preprocessing_ms": 42.24901599997111,
-            "question_scoring_ms": 65.02405200001249,
-            "suffix_prefill_ms": 33.727166999995006,
-            "decode_ms": 178.90306399999645,
+            "preprocessing_ms": 50.76567699995849,
+            "question_scoring_ms": 68.94259399996372,
+            "suffix_prefill_ms": 40.09658199998967,
+            "decode_ms": 195.68392299999005,
             "shared_fp16_suffix_bytes_at_start": 974848,
             "shared_fp16_suffix_bytes_upper_bound": 1118208,
-            "peak_allocated_bytes": 3668239872
+            "peak_allocated_bytes": 3668240384
           }
         }
       }
@@ -13517,40 +13517,21 @@
   ],
   "teacher_prefix_disagreements": [
     {
-      "id": "GSM8K-0000",
+      "id": "GSM8K-0001",
       "original": {
-        "position": 41,
-        "forward_kl": 0.8470979332923889,
-        "reverse_kl": 3.9771854877471924,
-        "tv": 0.5348244905471802,
-        "expected_acceptance": 0.4651755094528198,
-        "greedy_agreement": false
-      },
-      "off_policy": {
-        "position": 41,
-        "forward_kl": 0.2541452646255493,
-        "reverse_kl": 0.8915731310844421,
-        "tv": 0.1741407960653305,
-        "expected_acceptance": 0.8258591890335083,
-        "greedy_agreement": true
-      }
-    },
-    {
-      "id": "GSM8K-0000",
-      "original": {
-        "position": 59,
-        "forward_kl": 0.22288094460964203,
-        "reverse_kl": 0.3433515429496765,
-        "tv": 0.2767634093761444,
-        "expected_acceptance": 0.7232365608215332,
+        "position": 31,
+        "forward_kl": 0.1988026201725006,
+        "reverse_kl": 0.13675591349601746,
+        "tv": 0.20070472359657288,
+        "expected_acceptance": 0.7992953062057495,
         "greedy_agreement": true
       },
       "off_policy": {
-        "position": 59,
-        "forward_kl": 0.5209269523620605,
-        "reverse_kl": 0.8346343040466309,
-        "tv": 0.47014933824539185,
-        "expected_acceptance": 0.5298506617546082,
+        "position": 31,
+        "forward_kl": 0.14713647961616516,
+        "reverse_kl": 0.15150673687458038,
+        "tv": 0.25391891598701477,
+        "expected_acceptance": 0.7460811138153076,
         "greedy_agreement": false
       }
     },
@@ -13574,59 +13555,78 @@
       }
     },
     {
-      "id": "GSM8K-0002",
+      "id": "GSM8K-0003",
       "original": {
-        "position": 33,
-        "forward_kl": 0.43057119846343994,
-        "reverse_kl": 0.9353808760643005,
-        "tv": 0.3910220265388489,
-        "expected_acceptance": 0.6089779734611511,
-        "greedy_agreement": true
-      },
-      "off_policy": {
-        "position": 33,
-        "forward_kl": 0.44546031951904297,
-        "reverse_kl": 0.8425105214118958,
-        "tv": 0.38333967328071594,
-        "expected_acceptance": 0.6166603565216064,
-        "greedy_agreement": false
-      }
-    },
-    {
-      "id": "GSM8K-0002",
-      "original": {
-        "position": 128,
-        "forward_kl": 0.19536112248897552,
-        "reverse_kl": 0.20427566766738892,
-        "tv": 0.3061933219432831,
-        "expected_acceptance": 0.6938066482543945,
+        "position": 35,
+        "forward_kl": 0.09247781336307526,
+        "reverse_kl": 0.09043478965759277,
+        "tv": 0.20676866173744202,
+        "expected_acceptance": 0.7932313680648804,
         "greedy_agreement": false
       },
       "off_policy": {
-        "position": 128,
-        "forward_kl": 0.09439083933830261,
-        "reverse_kl": 0.10064332187175751,
-        "tv": 0.21042434871196747,
-        "expected_acceptance": 0.7895756363868713,
+        "position": 35,
+        "forward_kl": 0.05149027705192566,
+        "reverse_kl": 0.05210751295089722,
+        "tv": 0.15198785066604614,
+        "expected_acceptance": 0.8480121493339539,
         "greedy_agreement": true
       }
     },
     {
-      "id": "GSM8K-0006",
+      "id": "GSM8K-0003",
       "original": {
-        "position": 3,
-        "forward_kl": 0.07619646936655045,
-        "reverse_kl": 0.09242676943540573,
-        "tv": 0.1069912239909172,
-        "expected_acceptance": 0.8930087685585022,
+        "position": 42,
+        "forward_kl": 0.9473351240158081,
+        "reverse_kl": 1.253601312637329,
+        "tv": 0.6211521029472351,
+        "expected_acceptance": 0.3788478970527649,
+        "greedy_agreement": false
+      },
+      "off_policy": {
+        "position": 42,
+        "forward_kl": 0.542478621006012,
+        "reverse_kl": 0.8430259227752686,
+        "tv": 0.43882519006729126,
+        "expected_acceptance": 0.5611748099327087,
+        "greedy_agreement": true
+      }
+    },
+    {
+      "id": "GSM8K-0003",
+      "original": {
+        "position": 158,
+        "forward_kl": 0.8268396258354187,
+        "reverse_kl": 0.4939671754837036,
+        "tv": 0.42039990425109863,
+        "expected_acceptance": 0.5796000957489014,
         "greedy_agreement": true
       },
       "off_policy": {
-        "position": 3,
-        "forward_kl": 0.1683037132024765,
-        "reverse_kl": 0.20825865864753723,
-        "tv": 0.26305142045021057,
-        "expected_acceptance": 0.7369486093521118,
+        "position": 158,
+        "forward_kl": 0.6113678216934204,
+        "reverse_kl": 0.38904494047164917,
+        "tv": 0.3668316602706909,
+        "expected_acceptance": 0.6331683397293091,
+        "greedy_agreement": false
+      }
+    },
+    {
+      "id": "GSM8K-0005",
+      "original": {
+        "position": 71,
+        "forward_kl": 0.05699710547924042,
+        "reverse_kl": 0.05669960379600525,
+        "tv": 0.1558239907026291,
+        "expected_acceptance": 0.8441759943962097,
+        "greedy_agreement": true
+      },
+      "off_policy": {
+        "position": 71,
+        "forward_kl": 0.05782633274793625,
+        "reverse_kl": 0.0959232896566391,
+        "tv": 0.12777179479599,
+        "expected_acceptance": 0.87222820520401,
         "greedy_agreement": false
       }
     }

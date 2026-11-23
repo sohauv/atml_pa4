@@ -205,6 +205,39 @@ def quantize_appended_groups(cache, base, bits, channel):
                      v[..., previous:previous+complete, :], bits, channel), bits, channel)])
 
 
+def residual_group_updater(base, bits, channel, high):
+    """Consume complete groups from the context residual and appended tokens."""
+    length = base[0][0].size(-2)
+    device = base[0][0].device
+    if high is None:
+        low = torch.arange(length, device=device)
+    else:
+        mask = torch.ones(length, dtype=torch.bool, device=device)
+        mask[high] = False
+        low = mask.nonzero().flatten()
+    pending = low[low.numel() // 64 * 64:]
+    observed = length
+
+    def update(cache):
+        nonlocal pending, observed
+        end = cache[0][0].size(-2)
+        pending = torch.cat((pending, torch.arange(observed, end, device=device)))
+        observed = end
+        complete = pending.numel() // 64 * 64
+        if not complete:
+            return cache
+        indices, pending = pending[:complete], pending[complete:]
+        result = []
+        for key, value in cache:
+            packed = pack_layer(key.index_select(-2, indices), value.index_select(-2, indices),
+                                bits, channel)
+            k, v = unpack_layer(packed, bits, channel)
+            result.append((key.index_copy(-2, indices, k), value.index_copy(-2, indices, v)))
+        return tuple(result)
+
+    return update
+
+
 def decode(model, tokenizer, initial, absolute, eos, packed_update=None):
     out = initial
     generated = []
@@ -293,10 +326,9 @@ def handle_case(model, tokenizer, row, check_reference):
         nll = -logits[0].float().log_softmax(-1)[torch.arange(len(answer), device=tokens.device), answer].sum().item()
         if not math.isfinite(nll) or not math.isfinite(logkl):
             raise FloatingPointError(f"Non-finite scores on {row['id']} {policy}")
-        def update(cache):
-            return quantize_appended_groups(cache, base, bits, channel)
+        update = residual_group_updater(base, bits, channel, high) if bits else None
 
-        (text, count), decode_ms = timed(lambda: decode(model, tokenizer, out, tokens.size(1), eos, update if bits else None))
+        (text, count), decode_ms = timed(lambda: decode(model, tokenizer, out, tokens.size(1), eos, update))
         extracted = re.findall(r"(?<!\d)\d{5}(?!\d)", text)
         high_list = high.tolist() if high is not None else None
         errors = None
@@ -412,6 +444,7 @@ def main():
     parser.add_argument("--revision", required=True)
     parser.add_argument("--sweep-only", action="store_true")
     parser.add_argument("--reference-only", action="store_true")
+    parser.add_argument("--retrieval-only", action="store_true")
     args = parser.parse_args()
     torch.manual_seed(6304)
     if not torch.cuda.is_available():
@@ -427,7 +460,8 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(MODEL, revision=args.revision)
     manifest = dict(model=MODEL, revision=args.revision, gpu=torch.cuda.get_device_name(),
                     dtype="float16", backend="sdpa", seed=6304, torch_version=torch.__version__,
-                    source_sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+                    source_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                    residual_grouping="complete groups span context residual and appended positions")
     if (out / "metadata.json").exists() and json.loads((out / "metadata.json").read_text()) != manifest:
         raise ValueError("Existing results have different provenance")
     write_json(out / "metadata.json", manifest)
@@ -441,7 +475,8 @@ def main():
                 write_json(result, handle_case(model, tokenizer, row, check_reference=i % 30 == 0))
             if (i + 1) % 10 == 0:
                 print(f"Retrieval: {i + 1}/{len(cases)}", flush=True)
-    packing_sweep(model, out / "packing_sweep.json")
+    if not args.retrieval_only:
+        packing_sweep(model, out / "packing_sweep.json")
 
 
 if __name__ == "__main__":

@@ -38,7 +38,7 @@ python kv_cache.py --course-data atml-pa4-datasets --output-dir runs/kv --revisi
 python kv_cache.py --course-data atml-pa4-datasets --output-dir runs/kv-reference --revision 989aa7980e4cf806f80c7fef2b1adb7bc71aa306 --reference-only
 ```
 
-The token-wise, channel-wise, and hybrid cache layouts preserve an incomplete append group in FP16. The append boundary test verifies grouping separately from the original context residual. The benchmark uses chunked prefill to construct the cache for larger batch sizes.
+The token-wise, channel-wise, and hybrid cache layouts preserve an incomplete append group in FP16. The corrected retrieval runs combine the original FP16 context residual with appended positions before forming complete groups. The earlier append-only boundary check and retrieval archive are kept for traceability. The benchmark uses chunked prefill to construct the cache for larger batch sizes.
 
 ## Task 3
 
@@ -48,7 +48,7 @@ python distillation.py --course-data atml-pa4-datasets --output-dir runs/distill
 python speculative_eval.py --course-data atml-pa4-datasets --adapters runs/distillation --output-dir runs/speculative
 ```
 
-Both GPU runners can continue from an existing output directory. Evaluation recreates each merged draft from its trained adapter and pinned backbone. Existing teacher and original-draft prefix banks were generated using the course prompts, seeds, and position strata with sequential multinomial sampling. The saved timing traces record per-round costs and adjacent target-only runs.
+Both GPU runners can continue from an existing output directory. Evaluation recreates each merged draft from its trained adapter and pinned backbone. The final teacher and original-draft alignment scores use banks produced by the course setup script. The Transformers compatibility adjustment applies the course per-prompt seed to CUDA before generation. The original sequentially generated banks remain in the initial evaluation archive. The saved timing traces record per-round costs and adjacent target-only runs.
 
 ## Targeted GPU checks
 
@@ -65,8 +65,9 @@ These checks write JSON in separate subdirectories under `runs/`.
 ```bash
 python summarize_task1.py
 python summarize_task2.py
-python summarize_speculative.py pa4-speculative-results.zip task3-summary.json --training-archive pa4-distillation-results.zip
+python summarize_speculative.py pa4-speculative-results.zip task3-summary.json --training-archive pa4-distillation-results.zip --course-bank-archive pa4-course-bank-results.zip
 python plot_results.py
+python select_examples.py
 ```
 
 The result archives contain per-prompt or per-condition JSON used by these scripts. The submission staging copies omit binary training checkpoints. To regenerate adapters and checkpoints, run the training commands above.

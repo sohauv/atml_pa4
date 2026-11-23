@@ -227,100 +227,114 @@
     "target_law_bank_diagnostic": {
       "all/short": {
         "prompts": 120,
-        "paired_positions": 1223,
-        "speculative_minus_teacher_expected_acceptance": -0.0010037804761092778,
+        "paired_positions": 1274,
+        "speculative_minus_teacher_expected_acceptance": 0.009543625535545767,
         "expected_acceptance_ci95": [
-          -0.014321885518807784,
-          0.013042441965400258
+          -0.005708015363326829,
+          0.024942346546385025
         ],
-        "speculative_minus_teacher_forward_kl": 0.006510363171566014,
+        "speculative_minus_teacher_forward_kl": -0.011668985270774293,
         "forward_kl_ci95": [
-          -0.019606324089963077,
-          0.03316825031268798
+          -0.04103211355790404,
+          0.020001082224382682
         ]
       },
       "all/long": {
-        "prompts": 54,
-        "paired_positions": 128,
-        "speculative_minus_teacher_expected_acceptance": 0.019272881094366312,
+        "prompts": 57,
+        "paired_positions": 123,
+        "speculative_minus_teacher_expected_acceptance": 0.0342662722114625,
         "expected_acceptance_ci95": [
-          -0.02489727026932723,
-          0.06537967236315617
+          -0.009949063529839387,
+          0.08044738749153593
         ],
-        "speculative_minus_teacher_forward_kl": -0.011131221715192985,
+        "speculative_minus_teacher_forward_kl": -0.03917176545970123,
         "forward_kl_ci95": [
-          -0.09650710165791208,
-          0.06897938908683184
+          -0.12740491519460032,
+          0.04463968595893438
         ]
       },
       "math/short": {
         "prompts": 60,
-        "paired_positions": 949,
-        "speculative_minus_teacher_expected_acceptance": 0.004571911532459319,
+        "paired_positions": 957,
+        "speculative_minus_teacher_expected_acceptance": 0.009990922398203468,
         "expected_acceptance_ci95": [
-          -0.012159507230857536,
-          0.020854070420689912
+          -0.007752504922199353,
+          0.028130176813662554
         ],
-        "speculative_minus_teacher_forward_kl": -0.0024927308165798062,
+        "speculative_minus_teacher_forward_kl": -0.008979261450182206,
         "forward_kl_ci95": [
-          -0.03260673769270525,
-          0.029355153860839055
+          -0.04611130304161904,
+          0.028683245819682693
         ]
       },
       "math/long": {
-        "prompts": 53,
-        "paired_positions": 124,
-        "speculative_minus_teacher_expected_acceptance": 0.020198308652447115,
+        "prompts": 55,
+        "paired_positions": 120,
+        "speculative_minus_teacher_expected_acceptance": 0.029094284772872923,
         "expected_acceptance_ci95": [
-          -0.02711830417016395,
-          0.06649242717529012
+          -0.013654929446423148,
+          0.07615425694184225
         ],
-        "speculative_minus_teacher_forward_kl": -0.012038285704776632,
+        "speculative_minus_teacher_forward_kl": -0.03276875232472065,
         "forward_kl_ci95": [
-          -0.09579326086098128,
-          0.06940577882120892
+          -0.12795813127532965,
+          0.05169087689217373
         ]
       },
       "familiar/short": {
         "prompts": 30,
-        "paired_positions": 140,
-        "speculative_minus_teacher_expected_acceptance": -0.01918674622263227,
+        "paired_positions": 153,
+        "speculative_minus_teacher_expected_acceptance": 0.024518697869543936,
         "expected_acceptance_ci95": [
-          -0.04023900982879457,
-          0.0036572441458702087
+          0.0001575355568239766,
+          0.0444497186126131
         ],
-        "speculative_minus_teacher_forward_kl": 0.022750568790914777,
+        "speculative_minus_teacher_forward_kl": -0.04137525726790735,
         "forward_kl_ci95": [
-          -0.004486583003563282,
-          0.058984009968470134
+          -0.07777214581871951,
+          0.003339750703868157
+        ]
+      },
+      "familiar/long": {
+        "prompts": 1,
+        "paired_positions": 1,
+        "speculative_minus_teacher_expected_acceptance": 0.09884810447692871,
+        "expected_acceptance_ci95": [
+          0.09884810447692871,
+          0.09884810447692871
+        ],
+        "speculative_minus_teacher_forward_kl": -0.06244404427707195,
+        "forward_kl_ci95": [
+          -0.06244404427707195,
+          -0.06244404427707195
         ]
       },
       "shifted/short": {
         "prompts": 30,
-        "paired_positions": 134,
-        "speculative_minus_teacher_expected_acceptance": -0.021494202204604646,
+        "paired_positions": 164,
+        "speculative_minus_teacher_expected_acceptance": -0.007037162053875807,
         "expected_acceptance_ci95": [
-          -0.05118374663887294,
-          0.0031597469659412607
+          -0.05432298270667472,
+          0.037521939483477915
         ],
-        "speculative_minus_teacher_forward_kl": 0.05330370203754778,
+        "speculative_minus_teacher_forward_kl": 0.00034927033443747814,
         "forward_kl_ci95": [
-          -0.016251347592818394,
-          0.1384997916712354
+          -0.08815863743242516,
+          0.10182283194301213
         ]
       },
       "shifted/long": {
         "prompts": 1,
-        "paired_positions": 4,
-        "speculative_minus_teacher_expected_acceptance": -0.00941537320613861,
+        "paired_positions": 2,
+        "speculative_minus_teacher_expected_acceptance": 0.312294602394104,
         "expected_acceptance_ci95": [
-          -0.00941537320613861,
-          -0.00941537320613861
+          0.312294602394104,
+          0.312294602394104
         ],
-        "speculative_minus_teacher_forward_kl": 0.016987761961900105,
+        "speculative_minus_teacher_forward_kl": -0.4117164141498506,
         "forward_kl_ci95": [
-          0.016987761961900105,
-          0.016987761961900105
+          -0.4117164141498506,
+          -0.4117164141498506
         ]
       }
     },
@@ -346,36 +360,36 @@
     },
     "alignment": {
       "teacher/math/1-64": {
-        "prefixes": 1904,
-        "forward_kl": 0.15386348642845998,
-        "reverse_kl": 0.21749093117270402,
-        "tv": 0.11795139659413813,
-        "expected_acceptance": 0.8820486037420625,
-        "greedy_agreement": 0.8965336134453782
+        "prefixes": 1920,
+        "forward_kl": 0.15402961295880038,
+        "reverse_kl": 0.21171742391697368,
+        "tv": 0.12419743977063212,
+        "expected_acceptance": 0.875802560026447,
+        "greedy_agreement": 0.8875
       },
       "teacher/math/65-192": {
-        "prefixes": 943,
-        "forward_kl": 0.1122601555474456,
-        "reverse_kl": 0.16180097787632328,
-        "tv": 0.08809868561329236,
-        "expected_acceptance": 0.9119013146529901,
-        "greedy_agreement": 0.9141039236479321
+        "prefixes": 929,
+        "forward_kl": 0.161353712726436,
+        "reverse_kl": 0.19628444477760376,
+        "tv": 0.11733714179593373,
+        "expected_acceptance": 0.882662857759371,
+        "greedy_agreement": 0.8751345532831001
       },
       "original_draft/math/1-64": {
         "prefixes": 1920,
-        "forward_kl": 0.1721382778478754,
-        "reverse_kl": 0.20453372070817422,
-        "tv": 0.12494416194636197,
-        "expected_acceptance": 0.8750558376001815,
-        "greedy_agreement": 0.8796875
+        "forward_kl": 0.20473024933231762,
+        "reverse_kl": 0.23884496961340815,
+        "tv": 0.14604574231893916,
+        "expected_acceptance": 0.8539542578781645,
+        "greedy_agreement": 0.8619791666666666
       },
       "original_draft/math/65-192": {
-        "prefixes": 959,
-        "forward_kl": 0.1484581866055986,
-        "reverse_kl": 0.17000887786133329,
-        "tv": 0.09892470113002888,
-        "expected_acceptance": 0.901075298395843,
-        "greedy_agreement": 0.9124087591240876
+        "prefixes": 960,
+        "forward_kl": 0.2534665202894232,
+        "reverse_kl": 0.26623489191593425,
+        "tv": 0.16419749371013118,
+        "expected_acceptance": 0.8358025057862203,
+        "greedy_agreement": 0.8270833333333333
       },
       "exact_spec_original_gamma4/math/1-64": {
         "prefixes": 1920,
@@ -458,20 +472,20 @@
         "greedy_agreement": 0.7979166666666667
       },
       "teacher/familiar/1-64": {
-        "prefixes": 298,
-        "forward_kl": 0.10987147005906557,
-        "reverse_kl": 0.15395671400142572,
-        "tv": 0.10877263899586881,
-        "expected_acceptance": 0.8912273609398196,
-        "greedy_agreement": 0.9060402684563759
+        "prefixes": 479,
+        "forward_kl": 0.20989508614081576,
+        "reverse_kl": 0.2792505264364288,
+        "tv": 0.1647150169723806,
+        "expected_acceptance": 0.835284982444349,
+        "greedy_agreement": 0.8580375782881002
       },
       "original_draft/familiar/1-64": {
-        "prefixes": 473,
-        "forward_kl": 0.2700277031443227,
-        "reverse_kl": 0.2817153463988602,
-        "tv": 0.17688326757269568,
-        "expected_acceptance": 0.8231167315680683,
-        "greedy_agreement": 0.8308668076109936
+        "prefixes": 533,
+        "forward_kl": 0.2922542640930316,
+        "reverse_kl": 0.3022073343489409,
+        "tv": 0.1859893231126387,
+        "expected_acceptance": 0.8140106775970889,
+        "greedy_agreement": 0.8067542213883677
       },
       "exact_spec_original_gamma4/familiar/1-64": {
         "prefixes": 281,
@@ -514,12 +528,20 @@
         "greedy_agreement": 0.8498402555910544
       },
       "original_draft/familiar/65-192": {
-        "prefixes": 139,
-        "forward_kl": 0.23533991601188908,
-        "reverse_kl": 0.24483281884761662,
-        "tv": 0.1625497556915434,
-        "expected_acceptance": 0.8374502431574485,
-        "greedy_agreement": 0.841726618705036
+        "prefixes": 227,
+        "forward_kl": 0.34707250562100633,
+        "reverse_kl": 0.34612491537701207,
+        "tv": 0.2453344384533448,
+        "expected_acceptance": 0.7546655617096351,
+        "greedy_agreement": 0.7312775330396476
+      },
+      "teacher/familiar/65-192": {
+        "prefixes": 69,
+        "forward_kl": 0.3246525089073565,
+        "reverse_kl": 0.4514326208387712,
+        "tv": 0.21068383346481415,
+        "expected_acceptance": 0.7893161661383035,
+        "greedy_agreement": 0.8695652173913043
       },
       "exact_spec_original_gamma4/familiar/65-192": {
         "prefixes": 16,
@@ -553,14 +575,6 @@
         "expected_acceptance": 0.7325035053140977,
         "greedy_agreement": 0.5882352941176471
       },
-      "teacher/familiar/65-192": {
-        "prefixes": 16,
-        "forward_kl": 0.23346726076852065,
-        "reverse_kl": 0.2906793801521417,
-        "tv": 0.18022382451454177,
-        "expected_acceptance": 0.8197761811316013,
-        "greedy_agreement": 0.9375
-      },
       "off_policy-6305/familiar/65-192": {
         "prefixes": 5,
         "forward_kl": 0.22907805694267153,
@@ -570,20 +584,20 @@
         "greedy_agreement": 1
       },
       "teacher/shifted/1-64": {
-        "prefixes": 229,
-        "forward_kl": 0.3510570396882579,
-        "reverse_kl": 0.4698796202700455,
-        "tv": 0.19581776496726103,
-        "expected_acceptance": 0.8041822345496266,
-        "greedy_agreement": 0.8165938864628821
+        "prefixes": 283,
+        "forward_kl": 0.3450626405727929,
+        "reverse_kl": 0.4585087964028791,
+        "tv": 0.19330502427972648,
+        "expected_acceptance": 0.8066949751688819,
+        "greedy_agreement": 0.8515901060070671
       },
       "original_draft/shifted/1-64": {
-        "prefixes": 108,
-        "forward_kl": 0.4296406120615925,
-        "reverse_kl": 0.5454904400890142,
-        "tv": 0.1807299029401124,
-        "expected_acceptance": 0.8192700942357382,
-        "greedy_agreement": 0.8611111111111112
+        "prefixes": 238,
+        "forward_kl": 0.42314444468590845,
+        "reverse_kl": 0.5157833492818146,
+        "tv": 0.22889158134821933,
+        "expected_acceptance": 0.7711084182021999,
+        "greedy_agreement": 0.7815126050420168
       },
       "exact_spec_original_gamma4/shifted/1-64": {
         "prefixes": 263,
@@ -627,11 +641,11 @@
       },
       "teacher/shifted/65-192": {
         "prefixes": 48,
-        "forward_kl": 0.25453858288412334,
-        "reverse_kl": 0.3565281976231252,
-        "tv": 0.19018782466637182,
-        "expected_acceptance": 0.8098121769726276,
-        "greedy_agreement": 0.8541666666666666
+        "forward_kl": 0.22768544238378277,
+        "reverse_kl": 0.24103437188235452,
+        "tv": 0.145857466493491,
+        "expected_acceptance": 0.8541425367196401,
+        "greedy_agreement": 0.875
       },
       "exact_spec_original_gamma4/shifted/65-192": {
         "prefixes": 59,
@@ -640,6 +654,14 @@
         "tv": 0.16429040804668132,
         "expected_acceptance": 0.8357095869921022,
         "greedy_agreement": 0.8305084745762712
+      },
+      "original_draft/shifted/65-192": {
+        "prefixes": 43,
+        "forward_kl": 0.3805034427272784,
+        "reverse_kl": 0.3226656244022347,
+        "tv": 0.20992490434920993,
+        "expected_acceptance": 0.7900750997454621,
+        "greedy_agreement": 0.8604651162790697
       },
       "off_policy-6305/shifted/65-192": {
         "prefixes": 22,
@@ -903,100 +925,114 @@
     "target_law_bank_diagnostic": {
       "all/short": {
         "prompts": 120,
-        "paired_positions": 1223,
-        "speculative_minus_teacher_expected_acceptance": 0.002015611185758502,
+        "paired_positions": 1274,
+        "speculative_minus_teacher_expected_acceptance": 0.007740242795629816,
         "expected_acceptance_ci95": [
-          -0.010893757703603272,
-          0.015952166554639585
+          -0.006852037464854678,
+          0.02229055104567914
         ],
-        "speculative_minus_teacher_forward_kl": 0.0032609285581113355,
+        "speculative_minus_teacher_forward_kl": -0.009610095919664541,
         "forward_kl_ci95": [
-          -0.02103881034808836,
-          0.028856897204560628
+          -0.04049791877904251,
+          0.022659985689350164
         ]
       },
       "all/long": {
-        "prompts": 54,
-        "paired_positions": 128,
-        "speculative_minus_teacher_expected_acceptance": 0.01918779779225588,
+        "prompts": 57,
+        "paired_positions": 123,
+        "speculative_minus_teacher_expected_acceptance": 0.032752652963002525,
         "expected_acceptance_ci95": [
-          -0.027525201786396114,
-          0.06481388878466478
+          -0.011208092249356783,
+          0.08012911196677916
         ],
-        "speculative_minus_teacher_forward_kl": -0.015750317830474182,
+        "speculative_minus_teacher_forward_kl": -0.03595084977790267,
         "forward_kl_ci95": [
-          -0.10233474974791572,
-          0.06555690891485472
+          -0.1183966551678042,
+          0.041227623830483874
         ]
       },
       "math/short": {
         "prompts": 60,
-        "paired_positions": 949,
-        "speculative_minus_teacher_expected_acceptance": 0.007608444095285977,
+        "paired_positions": 957,
+        "speculative_minus_teacher_expected_acceptance": 0.007300920371849834,
         "expected_acceptance_ci95": [
-          -0.009093847302415725,
-          0.023413594173088234
+          -0.009725393231258643,
+          0.024379099318668197
         ],
-        "speculative_minus_teacher_forward_kl": -0.006458007677845571,
+        "speculative_minus_teacher_forward_kl": -0.004194690094801393,
         "forward_kl_ci95": [
-          -0.035076300149463335,
-          0.024857390938381255
+          -0.037765490030754176,
+          0.03040280345339697
         ]
       },
       "math/long": {
-        "prompts": 53,
-        "paired_positions": 124,
-        "speculative_minus_teacher_expected_acceptance": 0.020181751539630276,
+        "prompts": 55,
+        "paired_positions": 120,
+        "speculative_minus_teacher_expected_acceptance": 0.027522855997085573,
         "expected_acceptance_ci95": [
-          -0.030156637868310653,
-          0.06664648836692877
+          -0.016653334144997384,
+          0.07495076635054179
         ],
-        "speculative_minus_teacher_forward_kl": -0.01667498534744361,
+        "speculative_minus_teacher_forward_kl": -0.029834400325622804,
         "forward_kl_ci95": [
-          -0.0974819920429093,
-          0.0653714422289967
+          -0.11510156488925642,
+          0.05094189163706125
         ]
       },
       "familiar/short": {
         "prompts": 30,
-        "paired_positions": 140,
-        "speculative_minus_teacher_expected_acceptance": -0.01692615704877036,
+        "paired_positions": 153,
+        "speculative_minus_teacher_expected_acceptance": 0.023217159548616098,
         "expected_acceptance_ci95": [
-          -0.035063338566975424,
-          0.0029317670398288304
+          -0.001820825253214155,
+          0.043297275518759705
         ],
-        "speculative_minus_teacher_forward_kl": 0.01931751199768509,
+        "speculative_minus_teacher_forward_kl": -0.040311775855853244,
         "forward_kl_ci95": [
-          -0.0006594868059401624,
-          0.045856709092199056
+          -0.07578051943493523,
+          0.004744920027655073
+        ]
+      },
+      "familiar/long": {
+        "prompts": 1,
+        "paired_positions": 1,
+        "speculative_minus_teacher_expected_acceptance": 0.10222494602203369,
+        "expected_acceptance_ci95": [
+          0.10222494602203369,
+          0.10222494602203369
+        ],
+        "speculative_minus_teacher_forward_kl": -0.05071229115128517,
+        "forward_kl_ci95": [
+          -0.05071229115128517,
+          -0.05071229115128517
         ]
       },
       "shifted/short": {
         "prompts": 30,
-        "paired_positions": 134,
-        "speculative_minus_teacher_expected_acceptance": -0.017803425219521593,
+        "paired_positions": 164,
+        "speculative_minus_teacher_expected_acceptance": -0.004134981007110782,
         "expected_acceptance_ci95": [
-          -0.04775765426176831,
-          0.006631128166032874
+          -0.048871810693998596,
+          0.03941789982111558
         ],
-        "speculative_minus_teacher_forward_kl": 0.05531577039678879,
+        "speculative_minus_teacher_forward_kl": -0.012568549237696017,
         "forward_kl_ci95": [
-          -0.022843942312515266,
-          0.1524224272466265
+          -0.12104945929527543,
+          0.11111226091415202
         ]
       },
       "shifted/long": {
         "prompts": 1,
-        "paired_positions": 4,
-        "speculative_minus_teacher_expected_acceptance": -0.011624768376350403,
+        "paired_positions": 2,
+        "speculative_minus_teacher_expected_acceptance": 0.31180432438850403,
         "expected_acceptance_ci95": [
-          -0.011624768376350403,
-          -0.011624768376350403
+          0.31180432438850403,
+          0.31180432438850403
         ],
-        "speculative_minus_teacher_forward_kl": 0.012914375195578032,
+        "speculative_minus_teacher_forward_kl": -0.3955570962280035,
         "forward_kl_ci95": [
-          0.012914375195578032,
-          0.012914375195578032
+          -0.3955570962280035,
+          -0.3955570962280035
         ]
       }
     },
@@ -1022,36 +1058,36 @@
     },
     "alignment": {
       "teacher/math/1-64": {
-        "prefixes": 1904,
-        "forward_kl": 0.15227218822495883,
-        "reverse_kl": 0.2160186386707537,
-        "tv": 0.11913342546868043,
-        "expected_acceptance": 0.8808665739513245,
-        "greedy_agreement": 0.8965336134453782
+        "prefixes": 1920,
+        "forward_kl": 0.1524284288255357,
+        "reverse_kl": 0.21002250922499313,
+        "tv": 0.12358480999566065,
+        "expected_acceptance": 0.8764151897281408,
+        "greedy_agreement": 0.8885416666666667
       },
       "teacher/math/65-192": {
-        "prefixes": 943,
-        "forward_kl": 0.1111564881539088,
-        "reverse_kl": 0.1662598703280804,
-        "tv": 0.08793604374491425,
-        "expected_acceptance": 0.9120639562606812,
-        "greedy_agreement": 0.9109225874867445
+        "prefixes": 929,
+        "forward_kl": 0.16070585494673006,
+        "reverse_kl": 0.19928209364069774,
+        "tv": 0.11757920345312986,
+        "expected_acceptance": 0.8824207955977376,
+        "greedy_agreement": 0.876210979547901
       },
       "original_draft/math/1-64": {
         "prefixes": 1920,
-        "forward_kl": 0.1770770303989772,
-        "reverse_kl": 0.20983844331249307,
-        "tv": 0.1266587420913964,
-        "expected_acceptance": 0.8733412574976682,
-        "greedy_agreement": 0.8776041666666666
+        "forward_kl": 0.2078778255629885,
+        "reverse_kl": 0.24833612822944218,
+        "tv": 0.1482436574246728,
+        "expected_acceptance": 0.8517563437111676,
+        "greedy_agreement": 0.859375
       },
       "original_draft/math/65-192": {
-        "prefixes": 959,
-        "forward_kl": 0.1461324834443548,
-        "reverse_kl": 0.17051510561748515,
-        "tv": 0.09876346165404913,
-        "expected_acceptance": 0.901236538717968,
-        "greedy_agreement": 0.913451511991658
+        "prefixes": 960,
+        "forward_kl": 0.24729377766115443,
+        "reverse_kl": 0.2643555453772045,
+        "tv": 0.1628466784283593,
+        "expected_acceptance": 0.8371533220633864,
+        "greedy_agreement": 0.825
       },
       "exact_spec_original_gamma4/math/1-64": {
         "prefixes": 1920,
@@ -1134,20 +1170,20 @@
         "greedy_agreement": 0.7895833333333333
       },
       "teacher/familiar/1-64": {
-        "prefixes": 298,
-        "forward_kl": 0.10704630440193418,
-        "reverse_kl": 0.13539304044704276,
-        "tv": 0.10305709314106568,
-        "expected_acceptance": 0.896942907331774,
-        "greedy_agreement": 0.912751677852349
+        "prefixes": 479,
+        "forward_kl": 0.20707204635892856,
+        "reverse_kl": 0.2609654600406137,
+        "tv": 0.15839348115284832,
+        "expected_acceptance": 0.8416065180475876,
+        "greedy_agreement": 0.8496868475991649
       },
       "original_draft/familiar/1-64": {
-        "prefixes": 473,
-        "forward_kl": 0.26795074809641045,
-        "reverse_kl": 0.27080953307447414,
-        "tv": 0.17338581663649938,
-        "expected_acceptance": 0.8266141826708271,
-        "greedy_agreement": 0.8329809725158562
+        "prefixes": 533,
+        "forward_kl": 0.28973239610116713,
+        "reverse_kl": 0.2912923021238992,
+        "tv": 0.18251500918224395,
+        "expected_acceptance": 0.817484990852635,
+        "greedy_agreement": 0.8180112570356473
       },
       "exact_spec_original_gamma4/familiar/1-64": {
         "prefixes": 281,
@@ -1190,12 +1226,20 @@
         "greedy_agreement": 0.853035143769968
       },
       "original_draft/familiar/65-192": {
-        "prefixes": 139,
-        "forward_kl": 0.2284023016575002,
-        "reverse_kl": 0.23567794123477365,
-        "tv": 0.15707986650274158,
-        "expected_acceptance": 0.8429201322493793,
-        "greedy_agreement": 0.8776978417266187
+        "prefixes": 227,
+        "forward_kl": 0.34344060482322625,
+        "reverse_kl": 0.3440660796223442,
+        "tv": 0.24229662616376657,
+        "expected_acceptance": 0.757703375711315,
+        "greedy_agreement": 0.762114537444934
+      },
+      "teacher/familiar/65-192": {
+        "prefixes": 69,
+        "forward_kl": 0.32558546619344747,
+        "reverse_kl": 0.4410172763380193,
+        "tv": 0.2125045566843624,
+        "expected_acceptance": 0.7874954411948937,
+        "greedy_agreement": 0.8260869565217391
       },
       "exact_spec_original_gamma4/familiar/65-192": {
         "prefixes": 16,
@@ -1229,14 +1273,6 @@
         "expected_acceptance": 0.7363106222713695,
         "greedy_agreement": 0.6176470588235294
       },
-      "teacher/familiar/65-192": {
-        "prefixes": 16,
-        "forward_kl": 0.22885811916785315,
-        "reverse_kl": 0.2893993501056684,
-        "tv": 0.1792903754976578,
-        "expected_acceptance": 0.8207096233963966,
-        "greedy_agreement": 0.9375
-      },
       "off_policy-6305/familiar/65-192": {
         "prefixes": 5,
         "forward_kl": 0.22115546190179886,
@@ -1246,20 +1282,20 @@
         "greedy_agreement": 1
       },
       "teacher/shifted/1-64": {
-        "prefixes": 229,
-        "forward_kl": 0.35902379640952764,
-        "reverse_kl": 0.46857720881585146,
-        "tv": 0.19472484317168587,
-        "expected_acceptance": 0.8052751567686489,
-        "greedy_agreement": 0.8078602620087336
+        "prefixes": 283,
+        "forward_kl": 0.35899576746349393,
+        "reverse_kl": 0.4544202437532396,
+        "tv": 0.192381545123131,
+        "expected_acceptance": 0.8076184556256756,
+        "greedy_agreement": 0.8515901060070671
       },
       "original_draft/shifted/1-64": {
-        "prefixes": 108,
-        "forward_kl": 0.42262048587037027,
-        "reverse_kl": 0.5309960669616919,
-        "tv": 0.17517028709698934,
-        "expected_acceptance": 0.824829712510109,
-        "greedy_agreement": 0.8611111111111112
+        "prefixes": 238,
+        "forward_kl": 0.4157837737417109,
+        "reverse_kl": 0.4955412962864874,
+        "tv": 0.223918258320301,
+        "expected_acceptance": 0.7760817418579294,
+        "greedy_agreement": 0.7941176470588235
       },
       "exact_spec_original_gamma4/shifted/1-64": {
         "prefixes": 263,
@@ -1303,10 +1339,10 @@
       },
       "teacher/shifted/65-192": {
         "prefixes": 48,
-        "forward_kl": 0.24729719491580227,
-        "reverse_kl": 0.356437334971569,
-        "tv": 0.18316698217842267,
-        "expected_acceptance": 0.816833014289538,
+        "forward_kl": 0.22522739535619016,
+        "reverse_kl": 0.2625416643065061,
+        "tv": 0.1512615180671825,
+        "expected_acceptance": 0.8487384853263696,
         "greedy_agreement": 0.8541666666666666
       },
       "exact_spec_original_gamma4/shifted/65-192": {
@@ -1316,6 +1352,14 @@
         "tv": 0.15273482661291768,
         "expected_acceptance": 0.84726517180265,
         "greedy_agreement": 0.847457627118644
+      },
+      "original_draft/shifted/65-192": {
+        "prefixes": 43,
+        "forward_kl": 0.3760187009168074,
+        "reverse_kl": 0.2993118630811507,
+        "tv": 0.20376152219420007,
+        "expected_acceptance": 0.796238475067671,
+        "greedy_agreement": 0.8837209302325582
       },
       "off_policy-6305/shifted/65-192": {
         "prefixes": 22,
@@ -1579,100 +1623,114 @@
     "target_law_bank_diagnostic": {
       "all/short": {
         "prompts": 120,
-        "paired_positions": 1223,
-        "speculative_minus_teacher_expected_acceptance": -0.004174988628505978,
+        "paired_positions": 1274,
+        "speculative_minus_teacher_expected_acceptance": 0.004745690002920489,
         "expected_acceptance_ci95": [
-          -0.017288595341555895,
-          0.00986165492498017
+          -0.010332225933429879,
+          0.01909823888342319
         ],
-        "speculative_minus_teacher_forward_kl": 0.011000954290105417,
+        "speculative_minus_teacher_forward_kl": -0.005102603502198617,
         "forward_kl_ci95": [
-          -0.01365480605963954,
-          0.03644623777307429
+          -0.03298444418128822,
+          0.02367767280499576
         ]
       },
       "all/long": {
-        "prompts": 54,
-        "paired_positions": 128,
-        "speculative_minus_teacher_expected_acceptance": 0.02985603827983141,
+        "prompts": 57,
+        "paired_positions": 123,
+        "speculative_minus_teacher_expected_acceptance": 0.0360615049920431,
         "expected_acceptance_ci95": [
-          -0.014373418791540738,
-          0.07681003239777712
+          -0.011773680359864038,
+          0.0841856906979771
         ],
-        "speculative_minus_teacher_forward_kl": -0.054965444977497224,
+        "speculative_minus_teacher_forward_kl": -0.053342146773215936,
         "forward_kl_ci95": [
-          -0.14083342007076663,
-          0.02554565025808467
+          -0.13180361366546858,
+          0.02308059707420805
         ]
       },
       "math/short": {
         "prompts": 60,
-        "paired_positions": 949,
-        "speculative_minus_teacher_expected_acceptance": -0.0007964925972000942,
+        "paired_positions": 957,
+        "speculative_minus_teacher_expected_acceptance": 0.004486674238521851,
         "expected_acceptance_ci95": [
-          -0.017290605743005154,
-          0.015622341081875712
+          -0.01299712080904778,
+          0.022178622974039875
         ],
-        "speculative_minus_teacher_forward_kl": 0.0040957619208311785,
+        "speculative_minus_teacher_forward_kl": -0.003453725887950638,
         "forward_kl_ci95": [
-          -0.025110878021678464,
-          0.034496149177681915
+          -0.03498962352937376,
+          0.028753391813832234
         ]
       },
       "math/long": {
-        "prompts": 53,
-        "paired_positions": 124,
-        "speculative_minus_teacher_expected_acceptance": 0.030842588793846867,
+        "prompts": 55,
+        "paired_positions": 120,
+        "speculative_minus_teacher_expected_acceptance": 0.029810451964537302,
         "expected_acceptance_ci95": [
-          -0.017981963709366222,
-          0.07914722016733935
+          -0.016186152852099876,
+          0.08067232802990944
         ],
-        "speculative_minus_teacher_forward_kl": -0.05683411624204336,
+        "speculative_minus_teacher_forward_kl": -0.04669656573949131,
         "forward_kl_ci95": [
-          -0.1453205504199816,
-          0.02502074018616885
+          -0.12904538644197489,
+          0.029509364859255618
         ]
       },
       "familiar/short": {
         "prompts": 30,
-        "paired_positions": 140,
-        "speculative_minus_teacher_expected_acceptance": -0.012422449248177665,
+        "paired_positions": 153,
+        "speculative_minus_teacher_expected_acceptance": 0.02185195100073721,
         "expected_acceptance_ci95": [
-          -0.026786106824874877,
-          0.0027910216909940127
+          -0.0011854425720546557,
+          0.04236113425069207
         ],
-        "speculative_minus_teacher_forward_kl": 0.009669642989345967,
+        "speculative_minus_teacher_forward_kl": -0.03616236047451417,
         "forward_kl_ci95": [
-          -0.0063008534719152355,
-          0.03190013173322465
+          -0.07069660471512407,
+          0.001986841818778437
+        ]
+      },
+      "familiar/long": {
+        "prompts": 1,
+        "paired_positions": 1,
+        "speculative_minus_teacher_expected_acceptance": 0.18540769815444946,
+        "expected_acceptance_ci95": [
+          0.18540769815444946,
+          0.18540769815444946
+        ],
+        "speculative_minus_teacher_forward_kl": -0.11715316027402878,
+        "forward_kl_ci95": [
+          -0.11715316027402878,
+          -0.11715316027402878
         ]
       },
       "shifted/short": {
         "prompts": 30,
-        "paired_positions": 134,
-        "speculative_minus_teacher_expected_acceptance": -0.019485050172948125,
+        "paired_positions": 164,
+        "speculative_minus_teacher_expected_acceptance": -0.009701748083277447,
         "expected_acceptance_ci95": [
-          -0.0510890397472658,
-          0.0064024582053675795
+          -0.05489855419638698,
+          0.032861115002050634
         ],
-        "speculative_minus_teacher_forward_kl": 0.06129506727926643,
+        "speculative_minus_teacher_forward_kl": 0.014252072960782864,
         "forward_kl_ci95": [
-          -0.022194583670163744,
-          0.1614590250567328
+          -0.07284974091756642,
+          0.12171489089548945
         ]
       },
       "shifted/long": {
         "prompts": 1,
-        "paired_positions": 4,
-        "speculative_minus_teacher_expected_acceptance": -0.0007270276546478271,
+        "paired_positions": 2,
+        "speculative_minus_teacher_expected_acceptance": 0.33645159006118774,
         "expected_acceptance_ci95": [
-          -0.0007270276546478271,
-          -0.0007270276546478271
+          0.33645159006118774,
+          0.33645159006118774
         ],
-        "speculative_minus_teacher_forward_kl": 0.002963364223433018,
+        "speculative_minus_teacher_forward_kl": -0.42017150204628706,
         "forward_kl_ci95": [
-          0.002963364223433018,
-          0.002963364223433018
+          -0.42017150204628706,
+          -0.42017150204628706
         ]
       }
     },
@@ -1698,36 +1756,36 @@
     },
     "alignment": {
       "teacher/math/1-64": {
-        "prefixes": 1904,
-        "forward_kl": 0.1544768726653668,
-        "reverse_kl": 0.24823633797349773,
-        "tv": 0.12697363346929683,
-        "expected_acceptance": 0.8730263659620986,
-        "greedy_agreement": 0.8975840336134454
+        "prefixes": 1920,
+        "forward_kl": 0.1587482613773354,
+        "reverse_kl": 0.24815206212752053,
+        "tv": 0.13323984805002378,
+        "expected_acceptance": 0.866760151895384,
+        "greedy_agreement": 0.8828125
       },
       "teacher/math/65-192": {
-        "prefixes": 943,
-        "forward_kl": 0.1214797413165992,
-        "reverse_kl": 0.21410530202845907,
-        "tv": 0.09837018431475651,
-        "expected_acceptance": 0.9016298160573205,
-        "greedy_agreement": 0.9045599151643691
+        "prefixes": 929,
+        "forward_kl": 0.16563389103157583,
+        "reverse_kl": 0.23851569198670777,
+        "tv": 0.12691534279712258,
+        "expected_acceptance": 0.873084657223027,
+        "greedy_agreement": 0.8719052744886975
       },
       "original_draft/math/1-64": {
         "prefixes": 1920,
-        "forward_kl": 0.17039129931511438,
-        "reverse_kl": 0.2348204789155183,
-        "tv": 0.1335139596562266,
-        "expected_acceptance": 0.8664860404406984,
-        "greedy_agreement": 0.8760416666666667
+        "forward_kl": 0.20095344711653934,
+        "reverse_kl": 0.26916720611839484,
+        "tv": 0.15287795993998546,
+        "expected_acceptance": 0.8471220402667919,
+        "greedy_agreement": 0.8546875
       },
       "original_draft/math/65-192": {
-        "prefixes": 959,
-        "forward_kl": 0.1422662692102959,
-        "reverse_kl": 0.2072341764945892,
-        "tv": 0.105787937451663,
-        "expected_acceptance": 0.8942120618442301,
-        "greedy_agreement": 0.9176225234619395
+        "prefixes": 960,
+        "forward_kl": 0.23838040478991604,
+        "reverse_kl": 0.2835054143976082,
+        "tv": 0.16892270098853654,
+        "expected_acceptance": 0.8310772988945245,
+        "greedy_agreement": 0.8197916666666667
       },
       "exact_spec_original_gamma4/math/1-64": {
         "prefixes": 1920,
@@ -1810,20 +1868,20 @@
         "greedy_agreement": 0.803125
       },
       "teacher/familiar/1-64": {
-        "prefixes": 298,
-        "forward_kl": 0.11587666393248985,
-        "reverse_kl": 0.1706495301459776,
-        "tv": 0.11403613165379857,
-        "expected_acceptance": 0.8859638677747458,
-        "greedy_agreement": 0.8993288590604027
+        "prefixes": 479,
+        "forward_kl": 0.21903087419506678,
+        "reverse_kl": 0.29202309977197993,
+        "tv": 0.16899793124613247,
+        "expected_acceptance": 0.8310020677978659,
+        "greedy_agreement": 0.8517745302713987
       },
       "original_draft/familiar/1-64": {
-        "prefixes": 473,
-        "forward_kl": 0.2466329456885796,
-        "reverse_kl": 0.2771674422634133,
-        "tv": 0.172991889694439,
-        "expected_acceptance": 0.8270081102722039,
-        "greedy_agreement": 0.8435517970401691
+        "prefixes": 533,
+        "forward_kl": 0.2612723440089702,
+        "reverse_kl": 0.2971284480428256,
+        "tv": 0.18311002021124043,
+        "expected_acceptance": 0.8168899809441915,
+        "greedy_agreement": 0.8217636022514071
       },
       "exact_spec_original_gamma4/familiar/1-64": {
         "prefixes": 281,
@@ -1866,12 +1924,20 @@
         "greedy_agreement": 0.8594249201277955
       },
       "original_draft/familiar/65-192": {
-        "prefixes": 139,
-        "forward_kl": 0.22277195540339711,
-        "reverse_kl": 0.24715710618690648,
-        "tv": 0.16510084903986497,
-        "expected_acceptance": 0.8348991489238876,
-        "greedy_agreement": 0.8489208633093526
+        "prefixes": 227,
+        "forward_kl": 0.3346462044648537,
+        "reverse_kl": 0.36060555659008614,
+        "tv": 0.24459536938332144,
+        "expected_acceptance": 0.755404631996995,
+        "greedy_agreement": 0.7312775330396476
+      },
+      "teacher/familiar/65-192": {
+        "prefixes": 69,
+        "forward_kl": 0.31851724221733224,
+        "reverse_kl": 0.43864667518241535,
+        "tv": 0.2245702240485854,
+        "expected_acceptance": 0.7754297766132631,
+        "greedy_agreement": 0.8695652173913043
       },
       "exact_spec_original_gamma4/familiar/65-192": {
         "prefixes": 16,
@@ -1905,14 +1971,6 @@
         "expected_acceptance": 0.7357056473984438,
         "greedy_agreement": 0.6470588235294118
       },
-      "teacher/familiar/65-192": {
-        "prefixes": 16,
-        "forward_kl": 0.24502742788172327,
-        "reverse_kl": 0.3281896572370897,
-        "tv": 0.1926498677348718,
-        "expected_acceptance": 0.8073501363396645,
-        "greedy_agreement": 0.9375
-      },
       "off_policy-6305/familiar/65-192": {
         "prefixes": 5,
         "forward_kl": 0.2240453040227294,
@@ -1922,20 +1980,20 @@
         "greedy_agreement": 1
       },
       "teacher/shifted/1-64": {
-        "prefixes": 229,
-        "forward_kl": 0.3501116743101713,
-        "reverse_kl": 0.4831606932341868,
-        "tv": 0.1979185520516432,
-        "expected_acceptance": 0.8020814461999585,
-        "greedy_agreement": 0.7947598253275109
+        "prefixes": 283,
+        "forward_kl": 0.3437777724614505,
+        "reverse_kl": 0.4693706943612902,
+        "tv": 0.1970475824487216,
+        "expected_acceptance": 0.8029524153197191,
+        "greedy_agreement": 0.8374558303886925
       },
       "original_draft/shifted/1-64": {
-        "prefixes": 108,
-        "forward_kl": 0.36538619433230013,
-        "reverse_kl": 0.4626962558745786,
-        "tv": 0.15971089351148327,
-        "expected_acceptance": 0.8402891037640748,
-        "greedy_agreement": 0.8611111111111112
+        "prefixes": 238,
+        "forward_kl": 0.3901874945476258,
+        "reverse_kl": 0.491489972472702,
+        "tv": 0.2190604107117524,
+        "expected_acceptance": 0.7809395882762781,
+        "greedy_agreement": 0.7815126050420168
       },
       "exact_spec_original_gamma4/shifted/1-64": {
         "prefixes": 263,
@@ -1979,11 +2037,11 @@
       },
       "teacher/shifted/65-192": {
         "prefixes": 48,
-        "forward_kl": 0.25439051133447305,
-        "reverse_kl": 0.39059955054879464,
-        "tv": 0.1902440592656139,
-        "expected_acceptance": 0.8097559399902821,
-        "greedy_agreement": 0.8125
+        "forward_kl": 0.2059820750474349,
+        "reverse_kl": 0.2539279973771045,
+        "tv": 0.14967749572178946,
+        "expected_acceptance": 0.8503225098053614,
+        "greedy_agreement": 0.8541666666666666
       },
       "exact_spec_original_gamma4/shifted/65-192": {
         "prefixes": 59,
@@ -1992,6 +2050,14 @@
         "tv": 0.1660078819352794,
         "expected_acceptance": 0.8339921175423315,
         "greedy_agreement": 0.847457627118644
+      },
+      "original_draft/shifted/65-192": {
+        "prefixes": 43,
+        "forward_kl": 0.36771822384786035,
+        "reverse_kl": 0.31302962386029703,
+        "tv": 0.20581018473045376,
+        "expected_acceptance": 0.7941898190697958,
+        "greedy_agreement": 0.8837209302325582
       },
       "off_policy-6305/shifted/65-192": {
         "prefixes": 22,
@@ -2255,100 +2321,114 @@
     "target_law_bank_diagnostic": {
       "all/short": {
         "prompts": 120,
-        "paired_positions": 1223,
-        "speculative_minus_teacher_expected_acceptance": -0.0014295972280588096,
+        "paired_positions": 1274,
+        "speculative_minus_teacher_expected_acceptance": 0.006825824594198254,
         "expected_acceptance_ci95": [
-          -0.014740571805409023,
-          0.012620661609856657
+          -0.00821650794321148,
+          0.02148443131643205
         ],
-        "speculative_minus_teacher_forward_kl": 0.013117883292310494,
+        "speculative_minus_teacher_forward_kl": -0.00010988724385553932,
         "forward_kl_ci95": [
-          -0.012560803831052998,
-          0.039417190537033325
+          -0.029061902771271568,
+          0.03122910370668138
         ]
       },
       "all/long": {
-        "prompts": 54,
-        "paired_positions": 128,
-        "speculative_minus_teacher_expected_acceptance": 0.03494942933320999,
+        "prompts": 57,
+        "paired_positions": 123,
+        "speculative_minus_teacher_expected_acceptance": 0.03447609849092437,
         "expected_acceptance_ci95": [
-          -0.00882895605279765,
-          0.08187194800738132
+          -0.010994606293164767,
+          0.07953388492266338
         ],
-        "speculative_minus_teacher_forward_kl": -0.04953093325041813,
+        "speculative_minus_teacher_forward_kl": -0.04818042620413544,
         "forward_kl_ci95": [
-          -0.12484624046206998,
-          0.02312165753794994
+          -0.1229708847637862,
+          0.0249216072698201
         ]
       },
       "math/short": {
         "prompts": 60,
-        "paired_positions": 949,
-        "speculative_minus_teacher_expected_acceptance": 0.003845794622965934,
+        "paired_positions": 957,
+        "speculative_minus_teacher_expected_acceptance": 0.007843941917240058,
         "expected_acceptance_ci95": [
-          -0.012734582278295912,
-          0.01984017104612428
+          -0.00984479430829132,
+          0.025559050184457414
         ],
-        "speculative_minus_teacher_forward_kl": 0.0056662629236813545,
+        "speculative_minus_teacher_forward_kl": 0.0009035912546596259,
         "forward_kl_ci95": [
-          -0.02293939319671129,
-          0.036632397678536016
+          -0.03321851917527825,
+          0.036226813884045354
         ]
       },
       "math/long": {
-        "prompts": 53,
-        "paired_positions": 124,
-        "speculative_minus_teacher_expected_acceptance": 0.036952374923613765,
+        "prompts": 55,
+        "paired_positions": 120,
+        "speculative_minus_teacher_expected_acceptance": 0.02840624451637268,
         "expected_acceptance_ci95": [
-          -0.009721565837702475,
-          0.08631908078478952
+          -0.013865957566357534,
+          0.07664403639549067
         ],
-        "speculative_minus_teacher_forward_kl": -0.051440002799515404,
+        "speculative_minus_teacher_forward_kl": -0.041865134703023915,
         "forward_kl_ci95": [
-          -0.12767288281307013,
-          0.022275921074601916
+          -0.11883353504596855,
+          0.03119965573142219
         ]
       },
       "familiar/short": {
         "prompts": 30,
-        "paired_positions": 140,
-        "speculative_minus_teacher_expected_acceptance": -0.018648355773517065,
+        "paired_positions": 153,
+        "speculative_minus_teacher_expected_acceptance": 0.020339969326468074,
         "expected_acceptance_ci95": [
-          -0.03862953702608744,
-          0.0035681733063289097
+          -0.010541728973388672,
+          0.04178715321668394
         ],
-        "speculative_minus_teacher_forward_kl": 0.02112435843030523,
+        "speculative_minus_teacher_forward_kl": -0.03372757846730511,
         "forward_kl_ci95": [
-          -0.004185487040113064,
-          0.055992619506505435
+          -0.07111314296342064,
+          0.020204172849035886
+        ]
+      },
+      "familiar/long": {
+        "prompts": 1,
+        "paired_positions": 1,
+        "speculative_minus_teacher_expected_acceptance": 0.16758179664611816,
+        "expected_acceptance_ci95": [
+          0.16758179664611816,
+          0.16758179664611816
+        ],
+        "speculative_minus_teacher_forward_kl": -0.08433840423822403,
+        "forward_kl_ci95": [
+          -0.08433840423822403,
+          -0.08433840423822403
         ]
       },
       "shifted/short": {
         "prompts": 30,
-        "paired_positions": 134,
-        "speculative_minus_teacher_expected_acceptance": -0.02080064700610602,
+        "paired_positions": 164,
+        "speculative_minus_teacher_expected_acceptance": -0.011722970663047418,
         "expected_acceptance_ci95": [
-          -0.054454168656489235,
-          0.009553152745164285
+          -0.05715416163899178,
+          0.029655220391957657
         ],
-        "speculative_minus_teacher_forward_kl": 0.05752595202745817,
+        "speculative_minus_teacher_forward_kl": 0.025338941012905264,
         "forward_kl_ci95": [
-          -0.031768613946863505,
-          0.16273581379712157
+          -0.05631756447669458,
+          0.12659433536910467
         ]
       },
       "shifted/long": {
         "prompts": 1,
-        "paired_positions": 4,
-        "speculative_minus_teacher_expected_acceptance": -0.027141883969306946,
+        "paired_positions": 2,
+        "speculative_minus_teacher_expected_acceptance": 0.33211448788642883,
         "expected_acceptance_ci95": [
-          -0.027141883969306946,
-          -0.027141883969306946
+          0.33211448788642883,
+          0.33211448788642883
         ],
-        "speculative_minus_teacher_forward_kl": 0.009650222771597328,
+        "speculative_minus_teacher_forward_kl": -0.40901892725378275,
         "forward_kl_ci95": [
-          0.009650222771597328,
-          0.009650222771597328
+          -0.40901892725378275,
+          -0.40901892725378275
         ]
       }
     },
@@ -2374,36 +2454,36 @@
     },
     "alignment": {
       "teacher/math/1-64": {
-        "prefixes": 1904,
-        "forward_kl": 0.15553123909734345,
-        "reverse_kl": 0.24562018803055038,
-        "tv": 0.12651406299936077,
-        "expected_acceptance": 0.873485937526747,
-        "greedy_agreement": 0.8986344537815126
+        "prefixes": 1920,
+        "forward_kl": 0.1563779022421004,
+        "reverse_kl": 0.24350349375222843,
+        "tv": 0.1321181742907007,
+        "expected_acceptance": 0.867881826000909,
+        "greedy_agreement": 0.8921875
       },
       "teacher/math/65-192": {
-        "prefixes": 943,
-        "forward_kl": 0.12622662827299566,
-        "reverse_kl": 0.22958550365319486,
-        "tv": 0.10343045142168308,
-        "expected_acceptance": 0.8965695483939898,
-        "greedy_agreement": 0.9034994697773064
+        "prefixes": 929,
+        "forward_kl": 0.16703635017556043,
+        "reverse_kl": 0.25218318005881857,
+        "tv": 0.13105998407296068,
+        "expected_acceptance": 0.8689400150136876,
+        "greedy_agreement": 0.8772874058127018
       },
       "original_draft/math/1-64": {
         "prefixes": 1920,
-        "forward_kl": 0.1725522052249077,
-        "reverse_kl": 0.22784249112285965,
-        "tv": 0.13233470166139513,
-        "expected_acceptance": 0.8676652990281581,
-        "greedy_agreement": 0.8765625
+        "forward_kl": 0.19807219440156174,
+        "reverse_kl": 0.2618637024254158,
+        "tv": 0.15104590547401192,
+        "expected_acceptance": 0.8489540945117672,
+        "greedy_agreement": 0.8635416666666667
       },
       "original_draft/math/65-192": {
-        "prefixes": 959,
-        "forward_kl": 0.1428875642806745,
-        "reverse_kl": 0.2131041784206727,
-        "tv": 0.10930879792042136,
-        "expected_acceptance": 0.8906912023630829,
-        "greedy_agreement": 0.9186652763295099
+        "prefixes": 960,
+        "forward_kl": 0.23766220608978822,
+        "reverse_kl": 0.29497206488986244,
+        "tv": 0.17267689727259045,
+        "expected_acceptance": 0.8273231024543445,
+        "greedy_agreement": 0.8239583333333333
       },
       "exact_spec_original_gamma4/math/1-64": {
         "prefixes": 1920,
@@ -2486,20 +2566,20 @@
         "greedy_agreement": 0.8125
       },
       "teacher/familiar/1-64": {
-        "prefixes": 298,
-        "forward_kl": 0.11245225895618816,
-        "reverse_kl": 0.15303154276023864,
-        "tv": 0.11118857621922809,
-        "expected_acceptance": 0.8888114246746037,
-        "greedy_agreement": 0.8993288590604027
+        "prefixes": 479,
+        "forward_kl": 0.2233057859588432,
+        "reverse_kl": 0.2958761124141302,
+        "tv": 0.16902917248290306,
+        "expected_acceptance": 0.8309708284933532,
+        "greedy_agreement": 0.8392484342379958
       },
       "original_draft/familiar/1-64": {
-        "prefixes": 473,
-        "forward_kl": 0.25115088290212895,
-        "reverse_kl": 0.2749195915511111,
-        "tv": 0.17642254828499435,
-        "expected_acceptance": 0.8235774512774848,
-        "greedy_agreement": 0.854122621564482
+        "prefixes": 533,
+        "forward_kl": 0.2781500666287462,
+        "reverse_kl": 0.294689914700741,
+        "tv": 0.1845403013435231,
+        "expected_acceptance": 0.8154596984945587,
+        "greedy_agreement": 0.8198874296435272
       },
       "exact_spec_original_gamma4/familiar/1-64": {
         "prefixes": 281,
@@ -2542,12 +2622,20 @@
         "greedy_agreement": 0.8562300319488818
       },
       "original_draft/familiar/65-192": {
-        "prefixes": 139,
-        "forward_kl": 0.23211428189450534,
-        "reverse_kl": 0.25227998044882943,
-        "tv": 0.16752320803993334,
-        "expected_acceptance": 0.8324767912892129,
-        "greedy_agreement": 0.841726618705036
+        "prefixes": 227,
+        "forward_kl": 0.33216269973606244,
+        "reverse_kl": 0.3612747130657691,
+        "tv": 0.24662694615348588,
+        "expected_acceptance": 0.7533730552059963,
+        "greedy_agreement": 0.73568281938326
+      },
+      "teacher/familiar/65-192": {
+        "prefixes": 69,
+        "forward_kl": 0.3265468417529242,
+        "reverse_kl": 0.47831731093132135,
+        "tv": 0.22899664303701645,
+        "expected_acceptance": 0.771003354286802,
+        "greedy_agreement": 0.7971014492753623
       },
       "exact_spec_original_gamma4/familiar/65-192": {
         "prefixes": 16,
@@ -2581,14 +2669,6 @@
         "expected_acceptance": 0.7342693367425133,
         "greedy_agreement": 0.6176470588235294
       },
-      "teacher/familiar/65-192": {
-        "prefixes": 16,
-        "forward_kl": 0.21715243624930736,
-        "reverse_kl": 0.2923849059443455,
-        "tv": 0.17744060393306427,
-        "expected_acceptance": 0.8225593902170658,
-        "greedy_agreement": 0.9375
-      },
       "off_policy-6305/familiar/65-192": {
         "prefixes": 5,
         "forward_kl": 0.29843346066772936,
@@ -2598,20 +2678,20 @@
         "greedy_agreement": 1
       },
       "teacher/shifted/1-64": {
-        "prefixes": 229,
-        "forward_kl": 0.3705914029316106,
-        "reverse_kl": 0.46998910485243306,
-        "tv": 0.19462340499499017,
-        "expected_acceptance": 0.8053765945038941,
-        "greedy_agreement": 0.7903930131004366
+        "prefixes": 283,
+        "forward_kl": 0.33878353427986413,
+        "reverse_kl": 0.44356365469854864,
+        "tv": 0.1903223011624389,
+        "expected_acceptance": 0.8096776992187904,
+        "greedy_agreement": 0.8480565371024735
       },
       "original_draft/shifted/1-64": {
-        "prefixes": 108,
-        "forward_kl": 0.38313872122482817,
-        "reverse_kl": 0.4406300699230525,
-        "tv": 0.15316446795838634,
-        "expected_acceptance": 0.8468355321221881,
-        "greedy_agreement": 0.8611111111111112
+        "prefixes": 238,
+        "forward_kl": 0.39225146464787414,
+        "reverse_kl": 0.47185249154127257,
+        "tv": 0.21327208240050946,
+        "expected_acceptance": 0.7867279172945423,
+        "greedy_agreement": 0.8025210084033614
       },
       "exact_spec_original_gamma4/shifted/1-64": {
         "prefixes": 263,
@@ -2655,11 +2735,11 @@
       },
       "teacher/shifted/65-192": {
         "prefixes": 48,
-        "forward_kl": 0.2366021132512941,
-        "reverse_kl": 0.3506005336889757,
-        "tv": 0.17943645873203687,
-        "expected_acceptance": 0.8205635398626328,
-        "greedy_agreement": 0.8333333333333334
+        "forward_kl": 0.2050469288512128,
+        "reverse_kl": 0.2679995607165135,
+        "tv": 0.15631245973690966,
+        "expected_acceptance": 0.8436875392993292,
+        "greedy_agreement": 0.8958333333333334
       },
       "exact_spec_original_gamma4/shifted/65-192": {
         "prefixes": 59,
@@ -2668,6 +2748,14 @@
         "tv": 0.16411487572388408,
         "expected_acceptance": 0.8358851226709657,
         "greedy_agreement": 0.8305084745762712
+      },
+      "original_draft/shifted/65-192": {
+        "prefixes": 43,
+        "forward_kl": 0.336784768696647,
+        "reverse_kl": 0.3050414689716363,
+        "tv": 0.20387905329834063,
+        "expected_acceptance": 0.7961209485697192,
+        "greedy_agreement": 0.8837209302325582
       },
       "off_policy-6305/shifted/65-192": {
         "prefixes": 22,
@@ -2918,100 +3006,114 @@
     "target_law_bank_diagnostic": {
       "all/short": {
         "prompts": 120,
-        "paired_positions": 1223,
-        "speculative_minus_teacher_expected_acceptance": 0.0013040595140402567,
+        "paired_positions": 1274,
+        "speculative_minus_teacher_expected_acceptance": 0.007211146773872795,
         "expected_acceptance_ci95": [
-          -0.011840020540556603,
-          0.01571457717534066
+          -0.007651238811093491,
+          0.022497964731931885
         ],
-        "speculative_minus_teacher_forward_kl": 0.004056243603868205,
+        "speculative_minus_teacher_forward_kl": -0.010657353191494376,
         "forward_kl_ci95": [
-          -0.02377801235262215,
-          0.032935068492572606
+          -0.04414468665672435,
+          0.024960904208748195
         ]
       },
       "all/long": {
-        "prompts": 54,
-        "paired_positions": 128,
-        "speculative_minus_teacher_expected_acceptance": 0.020528658758848906,
+        "prompts": 57,
+        "paired_positions": 123,
+        "speculative_minus_teacher_expected_acceptance": 0.03147541507472837,
         "expected_acceptance_ci95": [
-          -0.022383274525169312,
-          0.06504468891742456
+          -0.011071083892104972,
+          0.07578944150478609
         ],
-        "speculative_minus_teacher_forward_kl": -0.02499269597063669,
+        "speculative_minus_teacher_forward_kl": -0.039594087895098856,
         "forward_kl_ci95": [
-          -0.11606122415198533,
-          0.06087241435572782
+          -0.13659113121943453,
+          0.049370657628843115
         ]
       },
       "math/short": {
         "prompts": 60,
-        "paired_positions": 949,
-        "speculative_minus_teacher_expected_acceptance": 0.005461294796745694,
+        "paired_positions": 957,
+        "speculative_minus_teacher_expected_acceptance": 0.011461170053531882,
         "expected_acceptance_ci95": [
-          -0.010539694201378595,
-          0.021539119418061706
+          -0.006074195198706626,
+          0.030569006928592345
         ],
-        "speculative_minus_teacher_forward_kl": -0.005557306682889223,
+        "speculative_minus_teacher_forward_kl": -0.015045000815936243,
         "forward_kl_ci95": [
-          -0.035991756582119235,
-          0.02775341385363317
+          -0.055286166047572166,
+          0.02533869163931771
         ]
       },
       "math/long": {
-        "prompts": 53,
-        "paired_positions": 124,
-        "speculative_minus_teacher_expected_acceptance": 0.02215304297785605,
+        "prompts": 55,
+        "paired_positions": 120,
+        "speculative_minus_teacher_expected_acceptance": 0.02712986171245575,
         "expected_acceptance_ci95": [
-          -0.024477869033813476,
-          0.06787175613900889
+          -0.01336135420688363,
+          0.07217174259006467
         ],
-        "speculative_minus_teacher_forward_kl": -0.026301730261584264,
+        "speculative_minus_teacher_forward_kl": -0.03504591960770599,
         "forward_kl_ci95": [
-          -0.11960649452469263,
-          0.06425114901919508
+          -0.13563091770606975,
+          0.05664703582919116
         ]
       },
       "familiar/short": {
         "prompts": 30,
-        "paired_positions": 140,
-        "speculative_minus_teacher_expected_acceptance": -0.0037805552993501936,
+        "paired_positions": 153,
+        "speculative_minus_teacher_expected_acceptance": 0.002188001582825106,
         "expected_acceptance_ci95": [
-          -0.032788255772033294,
-          0.03382656706704034
+          -0.038139720162945596,
+          0.03503175933709305
         ],
-        "speculative_minus_teacher_forward_kl": 0.023144532126785373,
+        "speculative_minus_teacher_forward_kl": 0.018158669564429766,
         "forward_kl_ci95": [
-          -0.05932587874020315,
-          0.10246968683348834
+          -0.07762174910949945,
+          0.15072816761693
+        ]
+      },
+      "familiar/long": {
+        "prompts": 1,
+        "paired_positions": 1,
+        "speculative_minus_teacher_expected_acceptance": 0.05691033601760864,
+        "expected_acceptance_ci95": [
+          0.05691033601760864,
+          0.05691033601760864
+        ],
+        "speculative_minus_teacher_forward_kl": -0.04700089991092682,
+        "forward_kl_ci95": [
+          -0.04700089991092682,
+          -0.04700089991092682
         ]
       },
       "shifted/short": {
         "prompts": 30,
-        "paired_positions": 134,
-        "speculative_minus_teacher_expected_acceptance": -0.022825568914413452,
+        "paired_positions": 164,
+        "speculative_minus_teacher_expected_acceptance": -0.012903067033465316,
         "expected_acceptance_ci95": [
-          -0.05398753643035889,
-          0.005705694058783969
+          -0.05041365775951119,
+          0.022044352806397598
         ],
-        "speculative_minus_teacher_forward_kl": 0.052197279640617426,
+        "speculative_minus_teacher_forward_kl": -0.01193706480774758,
         "forward_kl_ci95": [
-          -0.029199018134752393,
-          0.15428307406694067
+          -0.09740751421647816,
+          0.0898829264066285
         ]
       },
       "shifted/long": {
         "prompts": 1,
-        "paired_positions": 4,
-        "speculative_minus_teacher_expected_acceptance": -0.02982725203037262,
+        "paired_positions": 2,
+        "speculative_minus_teacher_expected_acceptance": 0.2794911563396454,
         "expected_acceptance_ci95": [
-          -0.02982725203037262,
-          -0.02982725203037262
+          0.2794911563396454,
+          0.2794911563396454
         ],
-        "speculative_minus_teacher_forward_kl": 0.015587367048738088,
+        "speculative_minus_teacher_forward_kl": -0.30878077913075686,
         "forward_kl_ci95": [
-          0.015587367048738088,
-          0.015587367048738088
+          -0.30878077913075686,
+          -0.30878077913075686
         ]
       }
     },
@@ -3037,36 +3139,36 @@
     },
     "alignment": {
       "teacher/math/1-64": {
-        "prefixes": 1904,
-        "forward_kl": 0.16618102301614113,
-        "reverse_kl": 0.1918752802125365,
-        "tv": 0.1144676170932588,
-        "expected_acceptance": 0.8855323833139503,
-        "greedy_agreement": 0.8991596638655462
+        "prefixes": 1920,
+        "forward_kl": 0.1737856286804817,
+        "reverse_kl": 0.19187009793308296,
+        "tv": 0.12186109026996222,
+        "expected_acceptance": 0.8781389094578723,
+        "greedy_agreement": 0.8859375
       },
       "teacher/math/65-192": {
-        "prefixes": 943,
-        "forward_kl": 0.11561175083103647,
-        "reverse_kl": 0.14269437540260985,
-        "tv": 0.08406504299338473,
-        "expected_acceptance": 0.9159349569080996,
-        "greedy_agreement": 0.911983032873807
+        "prefixes": 929,
+        "forward_kl": 0.17225880441552427,
+        "reverse_kl": 0.1786826254360604,
+        "tv": 0.11317091095293612,
+        "expected_acceptance": 0.8868290890405202,
+        "greedy_agreement": 0.8848223896663079
       },
       "original_draft/math/1-64": {
         "prefixes": 1920,
-        "forward_kl": 0.19339137184060118,
-        "reverse_kl": 0.1860608392970738,
-        "tv": 0.12320592416904906,
-        "expected_acceptance": 0.876794076214234,
-        "greedy_agreement": 0.8765625
+        "forward_kl": 0.23682703510200628,
+        "reverse_kl": 0.23025541061781263,
+        "tv": 0.1469111430732692,
+        "expected_acceptance": 0.8530888566747308,
+        "greedy_agreement": 0.8536458333333333
       },
       "original_draft/math/65-192": {
-        "prefixes": 959,
-        "forward_kl": 0.16092829207405185,
-        "reverse_kl": 0.1508127153690518,
-        "tv": 0.09599913788216977,
-        "expected_acceptance": 0.9040008619878289,
-        "greedy_agreement": 0.9113660062565172
+        "prefixes": 960,
+        "forward_kl": 0.28067586085681995,
+        "reverse_kl": 0.260567097783616,
+        "tv": 0.16473396862462303,
+        "expected_acceptance": 0.8352660321940978,
+        "greedy_agreement": 0.825
       },
       "exact_spec_original_gamma4/math/1-64": {
         "prefixes": 1920,
@@ -3149,20 +3251,20 @@
         "greedy_agreement": 0.790625
       },
       "teacher/familiar/1-64": {
-        "prefixes": 298,
-        "forward_kl": 0.3249618516482397,
-        "reverse_kl": 0.431347893153378,
-        "tv": 0.1995481993728036,
-        "expected_acceptance": 0.8004518011272354,
-        "greedy_agreement": 0.7986577181208053
+        "prefixes": 479,
+        "forward_kl": 0.3611173674635103,
+        "reverse_kl": 0.41384297328817815,
+        "tv": 0.20715292347151476,
+        "expected_acceptance": 0.7928470766370133,
+        "greedy_agreement": 0.7828810020876826
       },
       "original_draft/familiar/1-64": {
-        "prefixes": 473,
-        "forward_kl": 0.4074009753068998,
-        "reverse_kl": 0.4207544876582455,
-        "tv": 0.22245748796566067,
-        "expected_acceptance": 0.777542510698008,
-        "greedy_agreement": 0.7822410147991543
+        "prefixes": 533,
+        "forward_kl": 0.4221924208590499,
+        "reverse_kl": 0.4176527795453766,
+        "tv": 0.227425617914444,
+        "expected_acceptance": 0.7725743824724408,
+        "greedy_agreement": 0.774859287054409
       },
       "exact_spec_original_gamma4/familiar/1-64": {
         "prefixes": 281,
@@ -3205,12 +3307,20 @@
         "greedy_agreement": 0.7635782747603834
       },
       "original_draft/familiar/65-192": {
-        "prefixes": 139,
-        "forward_kl": 0.2820456146891993,
-        "reverse_kl": 0.2756317651878089,
-        "tv": 0.17634218866877133,
-        "expected_acceptance": 0.8236578132608812,
-        "greedy_agreement": 0.8057553956834532
+        "prefixes": 227,
+        "forward_kl": 0.40677164119244985,
+        "reverse_kl": 0.3773354337197311,
+        "tv": 0.25853260219877494,
+        "expected_acceptance": 0.7414673981687571,
+        "greedy_agreement": 0.7048458149779736
+      },
+      "teacher/familiar/65-192": {
+        "prefixes": 69,
+        "forward_kl": 0.43872231165768544,
+        "reverse_kl": 0.5362628870169815,
+        "tv": 0.23642007450358715,
+        "expected_acceptance": 0.763579925765162,
+        "greedy_agreement": 0.7391304347826086
       },
       "exact_spec_original_gamma4/familiar/65-192": {
         "prefixes": 16,
@@ -3244,14 +3354,6 @@
         "expected_acceptance": 0.7226432281381944,
         "greedy_agreement": 0.6470588235294118
       },
-      "teacher/familiar/65-192": {
-        "prefixes": 16,
-        "forward_kl": 0.2756206924459548,
-        "reverse_kl": 0.31110003325738944,
-        "tv": 0.190901085799851,
-        "expected_acceptance": 0.8090989142656326,
-        "greedy_agreement": 0.9375
-      },
       "off_policy-6305/familiar/65-192": {
         "prefixes": 5,
         "forward_kl": 0.18329879050143064,
@@ -3261,20 +3363,20 @@
         "greedy_agreement": 1
       },
       "teacher/shifted/1-64": {
-        "prefixes": 229,
-        "forward_kl": 0.32250760870295075,
-        "reverse_kl": 0.41507454505387403,
-        "tv": 0.18212137208097195,
-        "expected_acceptance": 0.8178786278812126,
-        "greedy_agreement": 0.8209606986899564
+        "prefixes": 283,
+        "forward_kl": 0.33511107249737493,
+        "reverse_kl": 0.40064862306472887,
+        "tv": 0.18201937424616482,
+        "expected_acceptance": 0.8179806270784709,
+        "greedy_agreement": 0.8586572438162544
       },
       "original_draft/shifted/1-64": {
-        "prefixes": 108,
-        "forward_kl": 0.3707457262339799,
-        "reverse_kl": 0.4303243701250284,
-        "tv": 0.1528417252337493,
-        "expected_acceptance": 0.8471582747168012,
-        "greedy_agreement": 0.8611111111111112
+        "prefixes": 238,
+        "forward_kl": 0.43916518376574015,
+        "reverse_kl": 0.4573998130050894,
+        "tv": 0.21878923338446854,
+        "expected_acceptance": 0.7812107661191154,
+        "greedy_agreement": 0.7983193277310925
       },
       "exact_spec_original_gamma4/shifted/1-64": {
         "prefixes": 263,
@@ -3318,11 +3420,11 @@
       },
       "teacher/shifted/65-192": {
         "prefixes": 48,
-        "forward_kl": 0.2692968663114937,
-        "reverse_kl": 0.32781005294280874,
-        "tv": 0.1839738257691733,
-        "expected_acceptance": 0.8160261735320091,
-        "greedy_agreement": 0.7916666666666666
+        "forward_kl": 0.2568400143038995,
+        "reverse_kl": 0.2351774048255114,
+        "tv": 0.14816141403840297,
+        "expected_acceptance": 0.8518385899563631,
+        "greedy_agreement": 0.8958333333333334
       },
       "exact_spec_original_gamma4/shifted/65-192": {
         "prefixes": 59,
@@ -3331,6 +3433,14 @@
         "tv": 0.14811760927742876,
         "expected_acceptance": 0.8518823900465238,
         "greedy_agreement": 0.847457627118644
+      },
+      "original_draft/shifted/65-192": {
+        "prefixes": 43,
+        "forward_kl": 0.3999411792367112,
+        "reverse_kl": 0.318114785883619,
+        "tv": 0.210273272274969,
+        "expected_acceptance": 0.7897267272306043,
+        "greedy_agreement": 0.813953488372093
       },
       "off_policy-6305/shifted/65-192": {
         "prefixes": 22,

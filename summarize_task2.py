@@ -62,7 +62,7 @@ def main():
                "test": row["test"], "test_only_window": row.get("test_only_window"),
                "learning_curve": row["learning_curve"]} for name, row in training.items()]
 
-    kv = read_archive("pa4-kv-results.zip")
+    kv = read_archive("pa4-kv-residual-results.zip")
     rows = [row for name, row in kv.items() if name.startswith("KV-")]
     assert len(rows) == 180
     cells = {}

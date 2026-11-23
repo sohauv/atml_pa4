@@ -25,7 +25,7 @@ def main():
         if len(chosen) == 3:
             break
 
-    kv = archived("pa4-kv-results.zip")
+    kv = archived("pa4-kv-residual-results.zip")
     retrieval = {}
     for policy in ("sink_recent", "int4_token", "hybrid"):
         failures = [row for name, row in kv.items() if Path(name).name.startswith("KV-")
@@ -34,6 +34,9 @@ def main():
         retrieval[policy] = failures[:2]
 
     evaluation = archived("pa4-speculative-results.zip")
+    official = archived("pa4-course-bank-results.zip")
+    course = {(name.split("/")[-2], row["id"]): row["prefix_metrics"]
+              for name, row in official.items() if "/course_alignment/" in name}
     alignment, continuations = [], []
     for name, reference in evaluation.items():
         if "/per_prompt/original/" not in name:
@@ -42,7 +45,8 @@ def main():
         if not any(x["domain"] == reference["domain"] for x in continuations):
             continuations.append(dict(domain=reference["domain"], id=reference["id"],
                                       original=reference["standalone"], off_policy=candidate["standalone"]))
-        left, right = reference["prefix_metrics"]["teacher"], candidate["prefix_metrics"]["teacher"]
+        left, right = (course[draft, reference["id"]]["teacher"]
+                       for draft in ("original", "off_policy-6304"))
         for a, b in zip(left, right, strict=True):
             assert a["position"] == b["position"]
             if a["greedy_agreement"] != b["greedy_agreement"]:
