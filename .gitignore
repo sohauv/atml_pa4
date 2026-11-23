@@ -1,0 +1,8 @@
+*.ipynb
+*.pt
+__pycache__/
+atml-pa4-datasets/
+runs/
+github-staging/
+pa4-task3-adapters.zip
+baseline-20261121T132350Z*.json

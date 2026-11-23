@@ -1,0 +1,506 @@
+{
+  "seed": 6304,
+  "trials": 100000,
+  "sequence_length": 3,
+  "degrees_of_freedom": 26,
+  "exact": {
+    "chi_squared": 26.7982888283149,
+    "log_p": -0.8675738854130601,
+    "p_value": 0.41996920769132295,
+    "sequences": [
+      {
+        "sequence": [
+          0,
+          0,
+          0
+        ],
+        "expected_probability": 0.38901699999999995,
+        "empirical_probability": 0.38719
+      },
+      {
+        "sequence": [
+          0,
+          0,
+          1
+        ],
+        "expected_probability": 0.07993499999999999,
+        "empirical_probability": 0.08017
+      },
+      {
+        "sequence": [
+          0,
+          0,
+          2
+        ],
+        "expected_probability": 0.06394799999999999,
+        "empirical_probability": 0.06384
+      },
+      {
+        "sequence": [
+          0,
+          1,
+          0
+        ],
+        "expected_probability": 0.014235000000000001,
+        "empirical_probability": 0.01419
+      },
+      {
+        "sequence": [
+          0,
+          1,
+          1
+        ],
+        "expected_probability": 0.075555,
+        "empirical_probability": 0.07621
+      },
+      {
+        "sequence": [
+          0,
+          1,
+          2
+        ],
+        "expected_probability": 0.01971,
+        "empirical_probability": 0.01929
+      },
+      {
+        "sequence": [
+          0,
+          2,
+          0
+        ],
+        "expected_probability": 0.023652,
+        "empirical_probability": 0.02394
+      },
+      {
+        "sequence": [
+          0,
+          2,
+          1
+        ],
+        "expected_probability": 0.014892,
+        "empirical_probability": 0.01463
+      },
+      {
+        "sequence": [
+          0,
+          2,
+          2
+        ],
+        "expected_probability": 0.049056,
+        "empirical_probability": 0.04765
+      },
+      {
+        "sequence": [
+          1,
+          0,
+          0
+        ],
+        "expected_probability": 0.014235,
+        "empirical_probability": 0.01399
+      },
+      {
+        "sequence": [
+          1,
+          0,
+          1
+        ],
+        "expected_probability": 0.002925,
+        "empirical_probability": 0.0029
+      },
+      {
+        "sequence": [
+          1,
+          0,
+          2
+        ],
+        "expected_probability": 0.00234,
+        "empirical_probability": 0.0023
+      },
+      {
+        "sequence": [
+          1,
+          1,
+          0
+        ],
+        "expected_probability": 0.013455,
+        "empirical_probability": 0.01413
+      },
+      {
+        "sequence": [
+          1,
+          1,
+          1
+        ],
+        "expected_probability": 0.07141499999999999,
+        "empirical_probability": 0.07342
+      },
+      {
+        "sequence": [
+          1,
+          1,
+          2
+        ],
+        "expected_probability": 0.018629999999999997,
+        "empirical_probability": 0.01931
+      },
+      {
+        "sequence": [
+          1,
+          2,
+          0
+        ],
+        "expected_probability": 0.0072900000000000005,
+        "empirical_probability": 0.00758
+      },
+      {
+        "sequence": [
+          1,
+          2,
+          1
+        ],
+        "expected_probability": 0.00459,
+        "empirical_probability": 0.00464
+      },
+      {
+        "sequence": [
+          1,
+          2,
+          2
+        ],
+        "expected_probability": 0.015120000000000001,
+        "empirical_probability": 0.01489
+      },
+      {
+        "sequence": [
+          2,
+          0,
+          0
+        ],
+        "expected_probability": 0.023652,
+        "empirical_probability": 0.02346
+      },
+      {
+        "sequence": [
+          2,
+          0,
+          1
+        ],
+        "expected_probability": 0.00486,
+        "empirical_probability": 0.00471
+      },
+      {
+        "sequence": [
+          2,
+          0,
+          2
+        ],
+        "expected_probability": 0.0038879999999999995,
+        "empirical_probability": 0.00387
+      },
+      {
+        "sequence": [
+          2,
+          1,
+          0
+        ],
+        "expected_probability": 0.0026520000000000003,
+        "empirical_probability": 0.0029
+      },
+      {
+        "sequence": [
+          2,
+          1,
+          1
+        ],
+        "expected_probability": 0.014076,
+        "empirical_probability": 0.01407
+      },
+      {
+        "sequence": [
+          2,
+          1,
+          2
+        ],
+        "expected_probability": 0.003672,
+        "empirical_probability": 0.00394
+      },
+      {
+        "sequence": [
+          2,
+          2,
+          0
+        ],
+        "expected_probability": 0.018144000000000004,
+        "empirical_probability": 0.01774
+      },
+      {
+        "sequence": [
+          2,
+          2,
+          1
+        ],
+        "expected_probability": 0.011424000000000002,
+        "empirical_probability": 0.0113
+      },
+      {
+        "sequence": [
+          2,
+          2,
+          2
+        ],
+        "expected_probability": 0.037632000000000006,
+        "empirical_probability": 0.03774
+      }
+    ]
+  },
+  "negative_control": {
+    "chi_squared": 31138.74322506684,
+    "log_p": -15473.521325175634,
+    "p_value": 0.0,
+    "sequences": [
+      {
+        "sequence": [
+          0,
+          0,
+          0
+        ],
+        "expected_probability": 0.38901699999999995,
+        "empirical_probability": 0.19315
+      },
+      {
+        "sequence": [
+          0,
+          0,
+          1
+        ],
+        "expected_probability": 0.07993499999999999,
+        "empirical_probability": 0.07565
+      },
+      {
+        "sequence": [
+          0,
+          0,
+          2
+        ],
+        "expected_probability": 0.06394799999999999,
+        "empirical_probability": 0.06066
+      },
+      {
+        "sequence": [
+          0,
+          1,
+          0
+        ],
+        "expected_probability": 0.014235000000000001,
+        "empirical_probability": 0.02535
+      },
+      {
+        "sequence": [
+          0,
+          1,
+          1
+        ],
+        "expected_probability": 0.075555,
+        "empirical_probability": 0.07528
+      },
+      {
+        "sequence": [
+          0,
+          1,
+          2
+        ],
+        "expected_probability": 0.01971,
+        "empirical_probability": 0.03543
+      },
+      {
+        "sequence": [
+          0,
+          2,
+          0
+        ],
+        "expected_probability": 0.023652,
+        "empirical_probability": 0.02946
+      },
+      {
+        "sequence": [
+          0,
+          2,
+          1
+        ],
+        "expected_probability": 0.014892,
+        "empirical_probability": 0.02591
+      },
+      {
+        "sequence": [
+          0,
+          2,
+          2
+        ],
+        "expected_probability": 0.049056,
+        "empirical_probability": 0.05458
+      },
+      {
+        "sequence": [
+          1,
+          0,
+          0
+        ],
+        "expected_probability": 0.014235,
+        "empirical_probability": 0.02991
+      },
+      {
+        "sequence": [
+          1,
+          0,
+          1
+        ],
+        "expected_probability": 0.002925,
+        "empirical_probability": 0.00969
+      },
+      {
+        "sequence": [
+          1,
+          0,
+          2
+        ],
+        "expected_probability": 0.00234,
+        "empirical_probability": 0.0072
+      },
+      {
+        "sequence": [
+          1,
+          1,
+          0
+        ],
+        "expected_probability": 0.013455,
+        "empirical_probability": 0.02372
+      },
+      {
+        "sequence": [
+          1,
+          1,
+          1
+        ],
+        "expected_probability": 0.07141499999999999,
+        "empirical_probability": 0.0694
+      },
+      {
+        "sequence": [
+          1,
+          1,
+          2
+        ],
+        "expected_probability": 0.018629999999999997,
+        "empirical_probability": 0.03188
+      },
+      {
+        "sequence": [
+          1,
+          2,
+          0
+        ],
+        "expected_probability": 0.0072900000000000005,
+        "empirical_probability": 0.01831
+      },
+      {
+        "sequence": [
+          1,
+          2,
+          1
+        ],
+        "expected_probability": 0.00459,
+        "empirical_probability": 0.01419
+      },
+      {
+        "sequence": [
+          1,
+          2,
+          2
+        ],
+        "expected_probability": 0.015120000000000001,
+        "empirical_probability": 0.03346
+      },
+      {
+        "sequence": [
+          2,
+          0,
+          0
+        ],
+        "expected_probability": 0.023652,
+        "empirical_probability": 0.0308
+      },
+      {
+        "sequence": [
+          2,
+          0,
+          1
+        ],
+        "expected_probability": 0.00486,
+        "empirical_probability": 0.00998
+      },
+      {
+        "sequence": [
+          2,
+          0,
+          2
+        ],
+        "expected_probability": 0.0038879999999999995,
+        "empirical_probability": 0.00852
+      },
+      {
+        "sequence": [
+          2,
+          1,
+          0
+        ],
+        "expected_probability": 0.0026520000000000003,
+        "empirical_probability": 0.00748
+      },
+      {
+        "sequence": [
+          2,
+          1,
+          1
+        ],
+        "expected_probability": 0.014076,
+        "empirical_probability": 0.02825
+      },
+      {
+        "sequence": [
+          2,
+          1,
+          2
+        ],
+        "expected_probability": 0.003672,
+        "empirical_probability": 0.01085
+      },
+      {
+        "sequence": [
+          2,
+          2,
+          0
+        ],
+        "expected_probability": 0.018144000000000004,
+        "empirical_probability": 0.02425
+      },
+      {
+        "sequence": [
+          2,
+          2,
+          1
+        ],
+        "expected_probability": 0.011424000000000002,
+        "empirical_probability": 0.02076
+      },
+      {
+        "sequence": [
+          2,
+          2,
+          2
+        ],
+        "expected_probability": 0.037632000000000006,
+        "empirical_probability": 0.04588
+      }
+    ]
+  }
+}
