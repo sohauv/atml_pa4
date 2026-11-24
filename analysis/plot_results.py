@@ -130,13 +130,13 @@ def speculative(data):
 
 def archived_json(path, basename):
     with ZipFile(path) as archive:
-        name = next(name for name in archive.namelist() if Path(name).name == basename)
+        name = next(name for name in archive.namelist() if Path(name).name == Path(basename).name)
         return json.loads(archive.read(name))
 
 
 def sensitivity():
-    prune = archived_json("pa4-nonuniform-results.zip", "allocations.json")["marginal_costs"]
-    quant = archived_json("pa4-awq-folded-results.zip", "folded_precision_profiles.json")["profiles"]
+    prune = archived_json("results/task1/pa4-nonuniform-results.zip", "allocations.json")["marginal_costs"]
+    quant = archived_json("results/task1/pa4-awq-folded-results.zip", "folded_precision_profiles.json")["profiles"]
     names = ("q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj")
     fig, axes = plt.subplots(2, 1, figsize=(10, 5.5), layout="constrained", sharex=True)
     for axis, table, title in (
@@ -180,7 +180,7 @@ def kv_figures(data):
 def distillation_figures(data):
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.6), layout="constrained")
     axis = axes[0]
-    with ZipFile("pa4-distillation-results.zip") as archive:
+    with ZipFile("results/task3/pa4-distillation-results.zip") as archive:
         names = sorted(name for name in archive.namelist() if name.endswith("/training.json"))
         for name in names:
             row = json.loads(archive.read(name))
@@ -205,11 +205,11 @@ def distillation_figures(data):
 
 def main():
     OUT.mkdir(exist_ok=True)
-    compression(read("task1-summary.json"))
-    task2 = read("task2-summary.json")
+    compression(read("results/task1/task1-summary.json"))
+    task2 = read("results/task2/task2-summary.json")
     attention(task2)
     recall(task2)
-    task3 = read("task3-summary.json")
+    task3 = read("results/task3/task3-summary.json")
     speculative(task3)
     sensitivity()
     kv_figures(task2)

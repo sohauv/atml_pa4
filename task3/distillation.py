@@ -15,8 +15,8 @@ import torch.nn.functional as F
 from torch import nn
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from baseline import read_jsonl
-from speculative import ModelState, markov_check, speculative
+from task1.baseline import read_jsonl
+from task3.speculative import ModelState, markov_check, speculative
 
 
 TARGET = "Qwen/Qwen2.5-1.5B-Instruct"

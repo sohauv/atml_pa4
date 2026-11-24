@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM
-from speculative import speculative
+from task3.speculative import speculative
 
 def load(name, revision):
     return AutoModelForCausalLM.from_pretrained(

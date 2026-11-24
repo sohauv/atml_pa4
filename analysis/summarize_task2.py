@@ -49,9 +49,9 @@ def aggregate_kv(rows):
 
 
 def main():
-    attention = read_archive("pa4-attention-results.zip")["attention.json"]
-    mqar = read_archive("pa4-mqar-results.zip")
-    intervention = read_archive("pa4-mqar-intervention.zip")
+    attention = read_archive("results/task2/pa4-attention-results.zip")["attention.json"]
+    mqar = read_archive("results/task2/pa4-mqar-results.zip")
+    intervention = read_archive("results/task2/pa4-mqar-intervention.zip")
     sweep = intervention.pop("inference_sweep.json")
     assert len(attention["runs"]) == 72 and len(mqar) == 39 and len(intervention) == 3
     assert len(sweep["runs"]) == 16
@@ -62,23 +62,23 @@ def main():
                "test": row["test"], "test_only_window": row.get("test_only_window"),
                "learning_curve": row["learning_curve"]} for name, row in training.items()]
 
-    kv = read_archive("pa4-kv-residual-results.zip")
+    kv = read_archive("results/task2/pa4-kv-residual-results.zip")
     rows = [row for name, row in kv.items() if name.startswith("KV-")]
     assert len(rows) == 180
     cells = {}
     for field in ("target_tokens", "position", "distractors"):
         for value in sorted({r[field] for r in rows}):
             cells[f"{field}={value}"] = aggregate_kv([r for r in rows if r[field] == value])
-    packing = read_archive("pa4-kv-sweep-results.zip")["packing_sweep.json"]
+    packing = read_archive("results/task2/pa4-kv-sweep-results.zip")["packing_sweep.json"]
     assert len(packing) == 16 and all(len(row["samples"]) == 10 for row in packing)
     output = dict(
-        attention=attention, causality=read_archive("pa4-causality-results.zip")["causality.json"],
+        attention=attention, causality=read_archive("results/task2/pa4-causality-results.zip")["causality.json"],
         recall=recall, recall_inference=sweep, kv=aggregate_kv(rows), kv_breakdowns=cells,
-        kv_reference=read_archive("pa4-kv-reference-results.zip")["reference_generation.json"],
-        kv_append_boundary=read_archive("pa4-kv-boundary-results.zip")["boundary.json"],
+        kv_reference=read_archive("results/task2/pa4-kv-reference-results.zip")["reference_generation.json"],
+        kv_append_boundary=read_archive("results/task2/pa4-kv-boundary-results.zip")["boundary.json"],
         kv_packing=packing,
     )
-    Path("task2-summary.json").write_text(json.dumps(output, indent=2, allow_nan=False) + "\n",
+    Path("results/task2/task2-summary.json").write_text(json.dumps(output, indent=2, allow_nan=False) + "\n",
                                          encoding="utf-8")
 
 

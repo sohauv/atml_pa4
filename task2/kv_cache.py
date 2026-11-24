@@ -11,8 +11,8 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache
 from transformers.models.qwen2.modeling_qwen2 import apply_rotary_pos_emb
 
-from baseline import read_jsonl
-from pruning import write_json
+from task1.baseline import read_jsonl
+from task1.pruning import write_json
 
 
 MODEL = "Qwen/Qwen2.5-1.5B-Instruct"

@@ -11,7 +11,7 @@ import torch
 import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from baseline import (MODEL_ID, PROJECTIONS, benchmark_cuda, hellaswag,
+from task1.baseline import (MODEL_ID, PROJECTIONS, benchmark_cuda, hellaswag,
                       parameter_inventory, perplexity, read_jsonl)
 
 
@@ -216,7 +216,7 @@ def main():
     mixed = {}
     folded_profiles = {}
     if any(CONDITIONS[key][0] == "mixed_quantization" for key in args.conditions):
-        from quantization import allocate_precision, profile_precision
+        from task1.quantization import allocate_precision, profile_precision
 
         start = perf_counter()
         profiles = profile_precision(projections(model), samples)
@@ -227,7 +227,7 @@ def main():
             revision=revision, source_revisions=lock,
         ))
     if any(CONDITIONS[key][0] == "folded_mixed_quantization" for key in args.conditions):
-        from quantization import profile_precision
+        from task1.quantization import profile_precision
 
         profile_start = perf_counter()
         folded_profiles = profile_precision(projections(model), samples)
@@ -271,7 +271,7 @@ def main():
             model = load_model(revision)
             start = perf_counter()
             if condition in QUANTIZATION_CONDITIONS:
-                from quantization import allocate_precision, apply_folded_quantization, apply_quantization
+                from task1.quantization import allocate_precision, apply_folded_quantization, apply_quantization
 
                 bits = sparsity
                 precision = mixed[bits][0] if method == "mixed_quantization" else bits

@@ -10,10 +10,10 @@ from time import perf_counter
 
 import torch
 
-from baseline import read_jsonl
-from distillation import (DRAFT, TARGET, install_adapters, load_adapters, load_model,
+from task1.baseline import read_jsonl
+from task3.distillation import (DRAFT, TARGET, install_adapters, load_adapters, load_model,
                           merge_adapters, prompt_ids, rollout, synchronize, tensor, write_json)
-from speculative import ModelState, speculative
+from task3.speculative import ModelState, speculative
 from transformers import AutoTokenizer
 
 

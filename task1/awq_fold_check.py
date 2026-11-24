@@ -3,7 +3,7 @@ from pathlib import Path
 import torch
 from torch.nn import functional as F
 from transformers import AutoModelForCausalLM
-from quantization import fold_mlp_up_down
+from task1.quantization import fold_mlp_up_down
 
 revision = "8faed761d45a263340a0528343f099c05c9a4323"
 model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-1.5B", revision=revision,

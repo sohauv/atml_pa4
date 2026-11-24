@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 import torch
-from kv_cache import quantize_appended_groups
+from task2.kv_cache import quantize_appended_groups
 
 rng = torch.Generator(device="cuda").manual_seed(6304)
 key, value = [torch.randn(1, 2, 194, 128, device="cuda", dtype=torch.float16,

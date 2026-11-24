@@ -15,8 +15,8 @@ def archived(path):
 
 
 def main():
-    baseline = read("baseline-20261121T134102Z.json")["hellaswag"]["examples"]
-    wanda = read("wanda_50.json")["hellaswag"]["examples"]
+    baseline = read("results/task1/baseline-20261121T134102Z.json")["hellaswag"]["examples"]
+    wanda = read("results/task1/wanda_50.json")["hellaswag"]["examples"]
     chosen = []
     for ref, test in zip(baseline, wanda, strict=True):
         assert ref["id"] == test["id"]
@@ -25,7 +25,7 @@ def main():
         if len(chosen) == 3:
             break
 
-    kv = archived("pa4-kv-residual-results.zip")
+    kv = archived("results/task2/pa4-kv-residual-results.zip")
     retrieval = {}
     for policy in ("sink_recent", "int4_token", "hybrid"):
         failures = [row for name, row in kv.items() if Path(name).name.startswith("KV-")
@@ -33,8 +33,8 @@ def main():
                     and not row["policies"][policy]["exact_match"]]
         retrieval[policy] = failures[:2]
 
-    evaluation = archived("pa4-speculative-results.zip")
-    official = archived("pa4-course-bank-results.zip")
+    evaluation = archived("results/task3/pa4-speculative-results.zip")
+    official = archived("results/task3/pa4-course-bank-results.zip")
     course = {(name.split("/")[-2], row["id"]): row["prefix_metrics"]
               for name, row in official.items() if "/course_alignment/" in name}
     alignment, continuations = [], []
@@ -58,7 +58,7 @@ def main():
     )
     assert len(chosen) == 3 and len(continuations) == 3 and len(alignment) >= 6
     assert all(retrieval.values())
-    Path("matched-examples.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n",
+    Path("results/shared/matched-examples.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n",
                                              encoding="utf-8")
 
 

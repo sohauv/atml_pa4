@@ -7,7 +7,7 @@ from pathlib import Path
 from statistics import median
 from zipfile import ZipFile
 
-from compare_pruning import paired_quality
+from task1.compare_pruning import paired_quality
 
 
 def archive_results(filename):
@@ -55,11 +55,11 @@ def timing(record):
 
 
 def main():
-    baseline = json.loads(Path("baseline-20261121T134102Z.json").read_text())
+    baseline = json.loads(Path("results/task1/baseline-20261121T134102Z.json").read_text())
     records = [json.loads(path.read_text()) for pattern in ("wanda*.json", "magnitude*.json")
-               for path in sorted(Path(".").glob(pattern))]
+               for path in sorted(Path("results/task1").glob(pattern))]
     for name in ("nonuniform", "q1", "awq-folded"):
-        records.extend(archive_results(f"pa4-{name}-results.zip"))
+        records.extend(archive_results(f"results/task1/pa4-{name}-results.zip"))
     by_name = {record["condition"]: record for record in records}
     assert len(records) == len(by_name) == 17
     results = {}
@@ -112,7 +112,7 @@ def main():
         awq_storage="Q2/Q3 use the folded runs, with explicit scales counted where folding was unavailable.",
         conditions=results,
     )
-    Path("task1-summary.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n",
+    Path("results/task1/task1-summary.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n",
                                          encoding="utf-8")
 
 
