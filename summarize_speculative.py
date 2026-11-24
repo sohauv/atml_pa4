@@ -39,6 +39,49 @@ def summarize_pairs(groups):
                                ("draft_ms", "verification_ms", "sampling_ms", "cache_ms")})
 
 
+def trace_summary(pairs):
+    tokens = sum(len(p["speculative"]["token_ids"]) for p in pairs)
+    rounds = [r for p in pairs for r in p["speculative"]["rounds"]]
+    by_phase = ("draft_ms", "verification_ms", "sampling_ms", "cache_ms")
+    phase_ms = sum(r[key] for r in rounds for key in by_phase)
+    return dict(
+        pairs=len(pairs), output_tokens=tokens,
+        mean_accepted_prefix=sum(r["accepted"] for r in rounds) / len(rounds),
+        verification_passes_per_output_token=sum(r["verified"] for r in rounds) / tokens,
+        target_passes_per_output_token=sum(r["verified"] + r["target_advance"] for r in rounds) / tokens,
+        draft_passes_per_output_token=sum(r["draft_passes"] for r in rounds) / tokens,
+        eos_rate=statistics.mean(p["speculative"]["eos"] for p in pairs),
+        truncation_rate=statistics.mean(p["speculative"]["truncated"] for p in pairs),
+        peak_allocated_bytes=max(p["speculative"]["peak_allocated_bytes"] for p in pairs),
+        mean_target_prefill_ms=statistics.mean(p["speculative"]["target_prefill_ms"] for p in pairs),
+        mean_draft_prefill_ms=statistics.mean(p["speculative"]["draft_prefill_ms"] for p in pairs),
+        mean_unattributed_decode_ms=(sum(p["speculative"]["decode_ms"] for p in pairs) - phase_ms) / len(pairs),
+        median_throughput_ratio=statistics.median(
+            len(p["speculative"]["token_ids"]) * p["target"]["total_ms"] /
+            (len(p["target"]["token_ids"]) * p["speculative"]["total_ms"]) for p in pairs
+        ),
+    )
+
+
+def trace_breakdowns(rows):
+    out = {}
+    for gamma in (2, 4):
+        pairs = [(row["domain"], p) for row in rows for p in row["paired_runs"] if p["gamma"] == gamma]
+        subsets = defaultdict(list)
+        for domain, p in pairs:
+            if p["fixed_64_ignores_eos"]:
+                subsets["fixed64"].append(p)
+                continue
+            length = len(p["speculative"]["token_ids"])
+            span = "1-16" if length <= 16 else "17-32" if length <= 32 else "33-64"
+            for key in ("all", domain, f"length/{span}"):
+                subsets[key].append(p)
+        assert len(subsets["fixed64"]) == 24
+        for key, samples in subsets.items():
+            out[f"gamma{gamma}/{key}"] = trace_summary(samples)
+    return out
+
+
 def cost_model(samples, gamma, alpha):
     by_length = defaultdict(dict)
     for sample in samples:
@@ -200,7 +243,7 @@ def main():
                            + checks[f"{draft}.json"]["merge_ms"] / 1000)
                 deployment[key] = deployment_cost(rows, gamma, upfront)
         summary[draft] = dict(
-            performance=speed, projected_speedup_by_prompt_length=projection,
+            performance=speed, trace_breakdowns=trace_breakdowns(rows), projected_speedup_by_prompt_length=projection,
             deployment_vs_target_only=deployment, target_law_bank_diagnostic=bank_consistency(rows),
             standalone={domain: dict(prompts=len(items), accuracy=statistics.mean(x["correct"] for x in items),
                                      truncation_rate=statistics.mean(x["truncated"] for x in items),
