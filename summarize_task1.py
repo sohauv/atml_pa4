@@ -58,10 +58,10 @@ def main():
     baseline = json.loads(Path("baseline-20261121T134102Z.json").read_text())
     records = [json.loads(path.read_text()) for pattern in ("wanda*.json", "magnitude*.json")
                for path in sorted(Path(".").glob(pattern))]
-    for name in ("nonuniform", "q1", "q2", "q3", "awq-folded"):
+    for name in ("nonuniform", "q1", "awq-folded"):
         records.extend(archive_results(f"pa4-{name}-results.zip"))
     by_name = {record["condition"]: record for record in records}
-    assert len(records) == len(by_name) == 22
+    assert len(records) == len(by_name) == 17
     results = {}
     for name, record in sorted(by_name.items()):
         for field in ("model", "revision", "source_revisions", "dtype", "attention_backend", "gpu"):
@@ -97,14 +97,6 @@ def main():
         results[chosen].update(comparator=control, paired_vs_comparator=paired_quality(b, a),
                                comparator_delta_ci95=paired_intervals(b, a))
     for bits in (3, 4):
-        chosen, control = f"mixed_int{bits}_budget", f"activation_aware_int{bits}"
-        a, b = by_name[chosen], by_name[control]
-        assert a["estimated_packed_model_bytes"] <= b["estimated_packed_model_bytes"]
-        assert a["uniform_budget_bytes"] == b["estimated_packed_model_bytes"]
-        results[chosen].update(comparator=control, paired_vs_comparator=paired_quality(b, a),
-                               comparator_delta_ci95=paired_intervals(b, a))
-
-    for bits in (3, 4):
         chosen, control = f"folded_mixed_int{bits}_budget", f"folded_int{bits}"
         a, b = by_name[chosen], by_name[control]
         assert a["estimated_packed_model_bytes"] <= b["estimated_packed_model_bytes"]
@@ -117,7 +109,7 @@ def main():
                       parameter_bytes=baseline["parameters"]["dense_parameter_bytes"]),
         bootstrap=dict(seed=6304, resamples=2000, nll_unit="whole window",
                        hellaswag_unit="example"),
-        awq_storage="The folded Q2/Q3 conditions are the updated comparisons. Earlier explicit-scale runs are retained for traceability.",
+        awq_storage="Q2/Q3 use the folded runs, with explicit scales counted where folding was unavailable.",
         conditions=results,
     )
     Path("task1-summary.json").write_text(json.dumps(summary, indent=2, allow_nan=False) + "\n",

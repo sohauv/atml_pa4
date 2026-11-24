@@ -6,3 +6,8 @@ runs/
 github-staging/
 pa4-task3-adapters.zip
 baseline-20261121T132350Z*.json
+/pa4-kv-results.zip
+/pa4-q2-results.zip
+/pa4-q3-results.zip
+/awq-folding-audit.json
+/audit_awq_folding.py

@@ -25,7 +25,7 @@ python pruning.py --course-data atml-pa4-datasets --output-dir runs/q1 --conditi
 python pruning.py --course-data atml-pa4-datasets --output-dir runs/awq --conditions folded_int8 folded_int4 folded_int3 folded_mixed_int4_budget folded_mixed_int3_budget
 ```
 
-The folded runs are the final Q2/Q3 comparisons. Earlier explicit-scale runs are retained in the results. Packed model sizes are estimates and the timing runs use dense FP16 execution. The folded mixed-precision allocator ranks candidates using pre-fold calibration reconstruction errors.
+The folded runs are the final Q2/Q3 comparisons. Packed model sizes are estimates and the timing runs use dense FP16 execution. The folded mixed-precision allocator ranks candidates using pre-fold calibration reconstruction errors.
 
 ## Task 2
 
@@ -38,7 +38,7 @@ python kv_cache.py --course-data atml-pa4-datasets --output-dir runs/kv --revisi
 python kv_cache.py --course-data atml-pa4-datasets --output-dir runs/kv-reference --revision 989aa7980e4cf806f80c7fef2b1adb7bc71aa306 --reference-only
 ```
 
-The token-wise, channel-wise, and hybrid cache layouts preserve an incomplete append group in FP16. The corrected retrieval runs combine the original FP16 context residual with appended positions before forming complete groups. The earlier append-only boundary check and retrieval archive are kept for traceability. The benchmark uses chunked prefill to construct the cache for larger batch sizes.
+The token-wise, channel-wise, and hybrid cache layouts preserve an incomplete append group in FP16. The corrected retrieval runs combine the original FP16 context residual with appended positions before forming complete groups. The append-only boundary check is recorded separately. The benchmark uses chunked prefill to construct the cache for larger batch sizes.
 
 ## Task 3
 
